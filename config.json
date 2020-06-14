@@ -1,0 +1,38 @@
+{
+  "development": {
+    "port": 3000,
+    "jwtSecret": "e75ff3a22420494780560c767f053198e79b103e093f4292b1ab9b0fd11c500e",
+    "logger": {
+      "logLevel": "silly"
+    },
+    "email": "notification.dedas@gmail.com",
+    "emailPass": "1Nk3KCM9oAkp01QWIF0g",
+    "mongoURI": "mongodb://localhost:27017/dedas-dev",
+    "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
+    "frontendUrl": "http://localhost:8000"
+  },
+  "test": {
+    "port": 3001,
+    "jwtSecret": "e2e7fc912c044c08b0f3d38948a337cd17fdc196e0fd461982195a7c5777a561",
+    "logger": {
+      "logLevel": "debug"
+    },
+    "email": "notification.dedas@gmail.com",
+    "emailPass": "1Nk3KCM9oAkp01QWIF0g",
+    "mongoURI": "mongodb://localhost:27017/dedas-test",
+    "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
+    "frontendUrl": "http://localhost:8000"
+  },
+  "production": {
+    "port": 3000,
+    "jwtSecret": "NOT_IN_REPO",
+    "logger": {
+      "logLevel": "info"
+    },
+    "email": "notification.dedas@gmail.com",
+    "emailPass": "1Nk3KCM9oAkp01QWIF0g",
+    "mongoURI": "mongodb://localhost:27017/dedas-prod",
+    "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
+    "frontendUrl": "http://localhost:8000"
+  }
+}

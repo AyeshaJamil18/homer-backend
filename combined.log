@@ -1,0 +1,818 @@
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580806272 e6sm2796946wme.3 - gsmtp"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580808519 w1sm26635628wro.72 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"a4a9acb0-7cc8-460f-b995-9eb72c9915e2\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"01fe544f-fd8b-420d-afdc-4bc347e09140\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9e324015-5a8d-486d-9665-3cb78f7b526c\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"5aa4da88-f4fc-4d67-8b8f-d054b894aecd\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"5aa4da88-f4fc-4d67-8b8f-d054b894aecd\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ab001017-6428-431e-87b4-da974f275684\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ab001017-6428-431e-87b4-da974f275684\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"64eb662f-88e6-4c26-8bfd-4dc8bfa9f098\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"64eb662f-88e6-4c26-8bfd-4dc8bfa9f098\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9875aff7-0a55-4c8b-a454-9b7944c50e02\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"9875aff7-0a55-4c8b-a454-9b7944c50e02\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"9875aff7-0a55-4c8b-a454-9b7944c50e02\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9af14a38-1524-4be4-9fdb-a51ca6ffae49\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"9af14a38-1524-4be4-9fdb-a51ca6ffae49\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"730f8968-2164-4b56-a84a-eaf6c3d83d4e\",\"message\":{\"method\":\"POST\",\"url\":\"/auth/register\"}}"}
+{"app":"studyhub-backend","context":"controllerauth.js","level":"debug","message":"{\"uuid\":\"730f8968-2164-4b56-a84a-eaf6c3d83d4e\",\"message\":\"User Aaron1993, Email dietz1993@gmail.com has been registered\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Notifying user 5e393b1e1c9fb5165010b29e about subject: Your account has been created\nmessage: Hello Aaron,\n\nyour account was successfully created.\nWe are very happy that you use our service :).\n\nBest regards\nYour DeDaS Team\n"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"853bd72a-e1b2-4f61-b1c2-1fe701600643\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"28e37232-ed3a-407a-9296-9e430b968121\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"218d8098-c943-4594-855c-735f3e6cbe63\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"07052918-81d5-4531-8715-a8d2e273adea\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"07052918-81d5-4531-8715-a8d2e273adea\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"0e576c1b-32f4-4ef6-b66d-b9bf9709ae51\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"0e576c1b-32f4-4ef6-b66d-b9bf9709ae51\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"fb7da905-5951-4d1d-8e53-3ac987925421\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"fb7da905-5951-4d1d-8e53-3ac987925421\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b7af38e2-cf57-4640-8671-739ff52b7645\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b7af38e2-cf57-4640-8671-739ff52b7645\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"fb7da905-5951-4d1d-8e53-3ac987925421\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"bbcc6cb1-719b-4eaa-aed4-89402e943ece\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"bbcc6cb1-719b-4eaa-aed4-89402e943ece\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ecdb666e-f12a-49bf-aba1-7db72ca10540\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ecdb666e-f12a-49bf-aba1-7db72ca10540\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"abbe2b75-e27b-492d-ad2a-7fa373c3572d\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"abbe2b75-e27b-492d-ad2a-7fa373c3572d\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580808990 o189sm3120787wme.1 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"94ff5225-41bf-4cbc-8866-f707b8c0bf3c\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"94ff5225-41bf-4cbc-8866-f707b8c0bf3c\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b0a058dc-280b-4876-bcc9-5d6fb9d744ad\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b0a058dc-280b-4876-bcc9-5d6fb9d744ad\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d28e2af4-fe6f-454b-a029-65420185d645\",\"message\":{\"method\":\"POST\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d28e2af4-fe6f-454b-a029-65420185d645\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Notifying user 5e393b1e1c9fb5165010b29e about subject: Your document Hubble_data has been created\nmessage: Hello Aaron,\n\nYour document Hubble_data has been created successfully.\n\nBest regards\nYour DeDaS Team\n"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580809028 z4sm7285291wrt.47 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"be5100d5-5cd6-49a5-a2d7-68658dd04640\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"be5100d5-5cd6-49a5-a2d7-68658dd04640\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d8ea6569-102f-4a41-8cfe-b533195256cd\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d8ea6569-102f-4a41-8cfe-b533195256cd\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"fb99f7b9-40ac-40b1-81e2-8ef56d3f4a01\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"25a3698f-817c-4bc2-9a28-3240fa64a47f\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"18c0c052-5c48-450c-9f65-67d5cf9db5ce\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"fcc00408-1dd0-43cb-b96c-76420d85a34a\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"fcc00408-1dd0-43cb-b96c-76420d85a34a\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"80a95500-6392-48fd-a776-bb8e4a41b00c\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"80a95500-6392-48fd-a776-bb8e4a41b00c\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e4cd78fb-b79a-4dd1-a5a0-8c059ce6133f\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e4cd78fb-b79a-4dd1-a5a0-8c059ce6133f\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"60f4ddfe-4feb-41f4-8347-001fc6f963b3\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"60f4ddfe-4feb-41f4-8347-001fc6f963b3\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"60f4ddfe-4feb-41f4-8347-001fc6f963b3\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b38221ae-11de-46c2-a87b-81f7d1aabfa2\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b38221ae-11de-46c2-a87b-81f7d1aabfa2\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"db94b7b9-369a-445d-837f-a36656ab8a24\",\"message\":{\"method\":\"GET\",\"url\":\"/kloudless/360354065/FkkMGm1AwfTHwy12FjUppqthpNcq_b99P45UFevdnLs5tBIHShUN7b8piMYhZ8n8L\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"db94b7b9-369a-445d-837f-a36656ab8a24\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/kloudless.js","level":"info","message":"{\"uuid\":\"db94b7b9-369a-445d-837f-a36656ab8a24\",\"message\":\"Kloudless download of file FkkMGm1AwfTHwy12FjUppqthpNcq_b99P45UFevdnLs5tBIHShUN7b8piMYhZ8n8L from account 360354065 requested\"}"}
+{"app":"studyhub-backend","context":"controller/kloudless.js","level":"debug","message":"{\"uuid\":\"db94b7b9-369a-445d-837f-a36656ab8a24\",\"message\":\"Kloudless download succeeded. Pushing to client\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"031df89e-51d0-4900-a37c-2b7d12f83b58\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"031df89e-51d0-4900-a37c-2b7d12f83b58\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"83ac3aa8-0274-4416-a3b3-18bcf860514d\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"83ac3aa8-0274-4416-a3b3-18bcf860514d\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d81070c5-ec80-4a83-b552-bd98b7a3aaae\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d81070c5-ec80-4a83-b552-bd98b7a3aaae\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9a2ed756-7f9d-4740-889c-f11e7577b191\",\"message\":{\"method\":\"POST\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"9a2ed756-7f9d-4740-889c-f11e7577b191\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Notifying user 5e393b1e1c9fb5165010b29e about subject: Your document Sales_2019 has been created\nmessage: Hello Aaron,\n\nYour document Sales_2019 has been created successfully.\n\nBest regards\nYour DeDaS Team\n"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580809131 v14sm29739328wrm.28 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"47cd3f9c-3d8d-4fae-857d-a55b957d34b9\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"47cd3f9c-3d8d-4fae-857d-a55b957d34b9\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"8001e94d-c2da-4ecf-8adf-d32c22347344\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"8001e94d-c2da-4ecf-8adf-d32c22347344\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"12b242ef-bce3-47b1-91b8-e2fb745f6950\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b891ac26-638f-46a2-b716-949f778aeb3f\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"575b10ff-1176-4bdb-825a-12bb0afc4225\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d4b9ed70-b5cd-4e58-9273-b9f943b569ae\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d4b9ed70-b5cd-4e58-9273-b9f943b569ae\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2f1806cd-d646-4950-9b0f-f2dbbe714ad7\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"2f1806cd-d646-4950-9b0f-f2dbbe714ad7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d9073c4e-4510-47be-a6ef-b59a36cc538c\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d9073c4e-4510-47be-a6ef-b59a36cc538c\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"5977346b-06ea-4efd-9619-9277757a560a\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"5977346b-06ea-4efd-9619-9277757a560a\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"d9073c4e-4510-47be-a6ef-b59a36cc538c\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"addb45b7-8ed4-49e3-babe-e5bfcdf96876\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"addb45b7-8ed4-49e3-babe-e5bfcdf96876\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"19e43084-3ee2-4b3a-b01c-d6cc8ffe4c34\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"447914a6-5974-40fe-93f0-8adb422279e4\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"52e2a16a-9dad-41b6-ba68-9cd2db5820a0\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"8caf03ed-c066-49fc-9a93-629c525e89c9\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"8caf03ed-c066-49fc-9a93-629c525e89c9\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"aa5c5d3d-a6e7-4522-8386-b365ab36d32a\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"aa5c5d3d-a6e7-4522-8386-b365ab36d32a\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f981468e-1094-4ce8-872f-14fcadb0f478\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f981468e-1094-4ce8-872f-14fcadb0f478\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"732b41a3-94e4-4716-b94c-a70a7071368e\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"732b41a3-94e4-4716-b94c-a70a7071368e\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9efa239f-7ba3-4717-8f0b-03514d4af6b2\",\"message\":{\"method\":\"POST\",\"url\":\"/auth/login\"}}"}
+{"app":"studyhub-backend","context":"controllerauth.js","level":"debug","message":"{\"uuid\":\"9efa239f-7ba3-4717-8f0b-03514d4af6b2\",\"message\":\"User {\\n  _id: 5e393b1e1c9fb5165010b29e,\\n  username: 'Aaron1993',\\n  email: 'dietz1993@gmail.com',\\n  firstName: 'Aaron',\\n  lastName: 'Dietz',\\n  password: '$2a$08$KpOmvaaI3.0xo6m99NwxO.W9E.eRRiQ9dlfwtzrOTUaSC8Nl3yLSu',\\n  createdAt: 2020-02-04T09:36:30.597Z,\\n  updatedAt: 2020-02-04T09:36:30.597Z\\n} has logged in\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"1117dea7-a941-429c-88f3-ca6fed465649\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"926dfb7d-8488-4db9-a045-8d129da5eb52\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e113d51c-f96b-4c53-b6c6-8b968060c56f\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"8fb5fc26-268d-43da-9b5d-0392399630de\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"8fb5fc26-268d-43da-9b5d-0392399630de\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"a7f7ead7-65a3-4c31-b868-767bf9cbbf4e\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"a2152c6c-9088-47a9-9142-8444de052b9f\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"a2152c6c-9088-47a9-9142-8444de052b9f\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e8915993-b212-480d-8518-c09e0766464b\",\"message\":{\"method\":\"POST\",\"url\":\"/auth/login\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"30ef5b2e-3fed-4f5a-a9da-f746c397274f\",\"message\":{\"method\":\"POST\",\"url\":\"/auth/login\"}}"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580809914 r6sm26564098wrp.95 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9c3f082e-d004-4443-85f8-cbbdf9fe48c6\",\"message\":{\"method\":\"POST\",\"url\":\"/auth/login\"}}"}
+{"app":"studyhub-backend","context":"controllerauth.js","level":"debug","message":"{\"uuid\":\"e8915993-b212-480d-8518-c09e0766464b\",\"message\":\"User {\\n  _id: 5e393b1e1c9fb5165010b29e,\\n  username: 'Aaron1993',\\n  email: 'dietz1993@gmail.com',\\n  firstName: 'Aaron',\\n  lastName: 'Dietz',\\n  password: '$2a$08$KpOmvaaI3.0xo6m99NwxO.W9E.eRRiQ9dlfwtzrOTUaSC8Nl3yLSu',\\n  createdAt: 2020-02-04T09:36:30.597Z,\\n  updatedAt: 2020-02-04T09:46:02.164Z,\\n  lastLogin: 2020-02-04T09:46:02.150Z\\n} has logged in\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"31286c84-d683-44a2-95da-59d9e98a31d6\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ba3bc7a7-83ca-4739-8df4-147c4d8e6a8f\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"4452dfcf-1955-4ee3-b2b2-a74f606e0335\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"a4956969-2b21-4732-9132-543774d00652\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"a4956969-2b21-4732-9132-543774d00652\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controllerauth.js","level":"debug","message":"{\"uuid\":\"30ef5b2e-3fed-4f5a-a9da-f746c397274f\",\"message\":\"User {\\n  _id: 5e393b1e1c9fb5165010b29e,\\n  username: 'Aaron1993',\\n  email: 'dietz1993@gmail.com',\\n  firstName: 'Aaron',\\n  lastName: 'Dietz',\\n  password: '$2a$08$KpOmvaaI3.0xo6m99NwxO.W9E.eRRiQ9dlfwtzrOTUaSC8Nl3yLSu',\\n  createdAt: 2020-02-04T09:36:30.597Z,\\n  updatedAt: 2020-02-04T09:46:02.164Z,\\n  lastLogin: 2020-02-04T09:46:02.150Z\\n} has logged in\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"a99cd3e8-210b-4cc6-9d0f-94f9a0047676\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"a99cd3e8-210b-4cc6-9d0f-94f9a0047676\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controllerauth.js","level":"debug","message":"{\"uuid\":\"9c3f082e-d004-4443-85f8-cbbdf9fe48c6\",\"message\":\"User {\\n  _id: 5e393b1e1c9fb5165010b29e,\\n  username: 'Aaron1993',\\n  email: 'dietz1993@gmail.com',\\n  firstName: 'Aaron',\\n  lastName: 'Dietz',\\n  password: '$2a$08$KpOmvaaI3.0xo6m99NwxO.W9E.eRRiQ9dlfwtzrOTUaSC8Nl3yLSu',\\n  createdAt: 2020-02-04T09:36:30.597Z,\\n  updatedAt: 2020-02-04T09:46:02.164Z,\\n  lastLogin: 2020-02-04T09:46:02.150Z\\n} has logged in\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"07a78d88-4587-4d91-b112-7607d0788317\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"07a78d88-4587-4d91-b112-7607d0788317\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"dc2f4b45-5891-4dbc-8961-431f63c9018e\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"dc2f4b45-5891-4dbc-8961-431f63c9018e\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"dc2f4b45-5891-4dbc-8961-431f63c9018e\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2f4113fc-d79e-4d9d-bd86-42514f97781a\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2024c626-db1d-46ec-b0f7-2e142c409e01\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"0e28a900-dff8-4d1a-af8c-3c6bb9747c11\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"0e28a900-dff8-4d1a-af8c-3c6bb9747c11\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"714d103f-4250-4089-ba29-4f685ee0b8f6\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"714d103f-4250-4089-ba29-4f685ee0b8f6\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f5c9557f-3fbc-4dd0-9c8b-d56bcc2b9d22\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"70b95bfb-0b4d-43c9-a0a2-fcffbe79b0fa\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"70b95bfb-0b4d-43c9-a0a2-fcffbe79b0fa\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"0e28a900-dff8-4d1a-af8c-3c6bb9747c11\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f995dcd6-9902-4d63-9f13-f7406caf45b0\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"034e0d54-bde5-4722-bdc4-11e40101443e\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f497c5f6-c2d9-49ca-920d-bd5172f1b526\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"cb91599c-984a-421b-83c0-9524ff2d916f\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"cb91599c-984a-421b-83c0-9524ff2d916f\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b6ee9fa5-b1a5-4076-b4be-4d3a23c7ecd9\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b6ee9fa5-b1a5-4076-b4be-4d3a23c7ecd9\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"20b4a1db-bb1c-449d-936b-0d0aee9b824e\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"20b4a1db-bb1c-449d-936b-0d0aee9b824e\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"cb91599c-984a-421b-83c0-9524ff2d916f\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d886c8b2-1996-46ce-a443-9c585146718e\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d886c8b2-1996-46ce-a443-9c585146718e\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b4adc001-056f-49b5-8e6e-84b4c907df0c\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b4adc001-056f-49b5-8e6e-84b4c907df0c\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"c97b18d8-b91a-4888-8005-b3508599d918\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"c97b18d8-b91a-4888-8005-b3508599d918\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e73eb3a3-cb2d-4c5b-90f6-ab678a8c69c6\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e73eb3a3-cb2d-4c5b-90f6-ab678a8c69c6\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"38907e4e-25f5-44c0-9134-75b4209628db\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"38907e4e-25f5-44c0-9134-75b4209628db\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"bb73ad7b-e03d-4f5f-993b-fa601309ea82\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"bb73ad7b-e03d-4f5f-993b-fa601309ea82\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f31b2f39-795e-4742-81c2-07be3c06a471\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f31b2f39-795e-4742-81c2-07be3c06a471\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ea3fe6d2-8638-4e91-b12a-472610578139\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ea3fe6d2-8638-4e91-b12a-472610578139\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9e2e4f9c-c8af-4302-9621-2b241bb5e64a\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"9e2e4f9c-c8af-4302-9621-2b241bb5e64a\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"546dd192-4a21-456b-8d02-8be4dc406dd3\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"546dd192-4a21-456b-8d02-8be4dc406dd3\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"57b30afe-f3f3-41a9-9be9-317d020156cc\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"57b30afe-f3f3-41a9-9be9-317d020156cc\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"57b30afe-f3f3-41a9-9be9-317d020156cc\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e87b34ed-961f-45bd-bceb-b728afe61adf\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e87b34ed-961f-45bd-bceb-b728afe61adf\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"6fd93159-75cc-4ca3-b271-f882ebf81d43\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"6fd93159-75cc-4ca3-b271-f882ebf81d43\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"14a54a7a-794a-47a4-a8fe-04397567adc5\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"14a54a7a-794a-47a4-a8fe-04397567adc5\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b1f85add-3f2d-4ab8-bb55-f80d575cec50\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b1f85add-3f2d-4ab8-bb55-f80d575cec50\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"3ba43aef-da06-4e82-a9a6-8d5404cbde8a\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"4253a9c0-d778-42b4-a789-e0499f3f9f28\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"57616117-5086-42eb-aa61-bd0018639a42\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"29d3ec56-fa59-4ea0-b23e-0892ae2ef5ae\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"29d3ec56-fa59-4ea0-b23e-0892ae2ef5ae\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"c9bf96bb-d307-456b-8977-c6562795f929\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"c9bf96bb-d307-456b-8977-c6562795f929\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"4bf12f1f-1f7a-491a-9286-f4746b9765f3\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"4bf12f1f-1f7a-491a-9286-f4746b9765f3\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9cc7f036-b087-49c2-80f2-ee5ec542a3a7\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"9cc7f036-b087-49c2-80f2-ee5ec542a3a7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"9cc7f036-b087-49c2-80f2-ee5ec542a3a7\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"77b7b2e1-8668-4bbe-bafa-b5d37fffe6fe\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"77b7b2e1-8668-4bbe-bafa-b5d37fffe6fe\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"03e666d9-0b39-4103-8225-d30f02e10a17\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d02df9b5-eace-4e94-8c0a-0e37eb3601d6\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"8e5bca16-52d8-4bb9-9b41-e91c09ff59df\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"0de35d58-ff89-41d2-8da1-3fa081e67a4f\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"0de35d58-ff89-41d2-8da1-3fa081e67a4f\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"dc510d25-821d-419b-a446-6183306bd71b\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"dc510d25-821d-419b-a446-6183306bd71b\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"55509089-aaf7-4634-87aa-c4a7cbd17820\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"55509089-aaf7-4634-87aa-c4a7cbd17820\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"5c9e5b91-c274-4e4b-8954-a1843dc1178b\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"5c9e5b91-c274-4e4b-8954-a1843dc1178b\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"cf11ee9d-fc92-4e86-92fd-5c0d3bc6b6b3\",\"message\":{\"method\":\"POST\",\"url\":\"/auth/register\"}}"}
+{"app":"studyhub-backend","context":"controllerauth.js","level":"debug","message":"{\"uuid\":\"cf11ee9d-fc92-4e86-92fd-5c0d3bc6b6b3\",\"message\":\"User ge73xij, Email 12beseajamil@seecs.edu.pk has been registered\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3941d64ff15430ec12aa2d was requested"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Notifying user 5e3941d64ff15430ec12aa2d about subject: Your account has been created\nmessage: Hello Ayesha,\n\nyour account was successfully created.\nWe are very happy that you use our service :).\n\nBest regards\nYour DeDaS Team\n"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"5f9d75ea-f20c-42fb-9d91-fec29c34fb8d\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f637463c-20e1-4ce8-8bab-7f9c4905580b\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"911cc864-6310-4464-a410-0ce5209b3b99\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ff8f4c02-5677-4745-aa00-bdb0e484d58a\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ff8f4c02-5677-4745-aa00-bdb0e484d58a\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"31947c9d-656c-4891-948f-ab29afd5595f\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"31947c9d-656c-4891-948f-ab29afd5595f\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"83f80fe5-ebc0-4d3c-8aa8-b00db5410dfb\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"83f80fe5-ebc0-4d3c-8aa8-b00db5410dfb\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"67f4b1be-a892-4bad-9240-1bef44c92903\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"67f4b1be-a892-4bad-9240-1bef44c92903\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"67f4b1be-a892-4bad-9240-1bef44c92903\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"1c315c3f-6f14-4c34-b6ed-5d1c1a1b1cc8\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"1c315c3f-6f14-4c34-b6ed-5d1c1a1b1cc8\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b4e32e1e-08e9-4713-afdd-e0277bc1a516\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b4e32e1e-08e9-4713-afdd-e0277bc1a516\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"61441095-eaba-4d9a-9471-ac6f9b0fd03d\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"61441095-eaba-4d9a-9471-ac6f9b0fd03d\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580810710 e22sm3152360wme.45 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"89d1d4d4-9ccf-421a-a965-b6ab56bd5adf\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"89d1d4d4-9ccf-421a-a965-b6ab56bd5adf\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f12ee6ac-fb21-4003-bd6d-8523ae59b718\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f12ee6ac-fb21-4003-bd6d-8523ae59b718\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"f12ee6ac-fb21-4003-bd6d-8523ae59b718\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"5e50bebb-9476-4cab-913b-c2d7accc328f\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"5e50bebb-9476-4cab-913b-c2d7accc328f\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"c7181fc7-fefe-4c37-86c0-4bf6603464bf\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"c7181fc7-fefe-4c37-86c0-4bf6603464bf\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"6c7bb05e-2456-4ea3-a709-3abae6b030a8\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9359aab7-20db-4205-83ec-d7baeb440385\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"becc4fc5-1783-4e41-9727-d0240a2c2d30\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"c84a9d64-64a1-4166-8e16-cbcd8871e550\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"c84a9d64-64a1-4166-8e16-cbcd8871e550\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"7cdb7997-fdc4-4e92-ab37-954b5d8799f7\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"7cdb7997-fdc4-4e92-ab37-954b5d8799f7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e7bc1fed-98e8-4266-ad7f-bc8ceb9b17de\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e7bc1fed-98e8-4266-ad7f-bc8ceb9b17de\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"83bcc5d8-bfb9-4460-9235-11bb7b938078\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"83bcc5d8-bfb9-4460-9235-11bb7b938078\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e6fa5fc9-f66c-4cc5-a4ed-f34cec53bbef\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e6fa5fc9-f66c-4cc5-a4ed-f34cec53bbef\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"83bcc5d8-bfb9-4460-9235-11bb7b938078\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9f73b2d7-7f2c-42ff-ba15-0f1be497faa9\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"9f73b2d7-7f2c-42ff-ba15-0f1be497faa9\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"129896da-1139-4457-966b-e62038db23fd\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"129896da-1139-4457-966b-e62038db23fd\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"4d265b12-48fc-418b-85d5-2238a2f952b7\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"4d265b12-48fc-418b-85d5-2238a2f952b7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"8c866fcf-1dd6-4cca-a95c-52c2beb3078e\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"8c866fcf-1dd6-4cca-a95c-52c2beb3078e\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"edb547cf-22b7-497c-92c5-ce09e90590e7\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"edb547cf-22b7-497c-92c5-ce09e90590e7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"a8794aa3-0507-4f87-b2b0-3c12d75c5470\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"a8794aa3-0507-4f87-b2b0-3c12d75c5470\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"a8794aa3-0507-4f87-b2b0-3c12d75c5470\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"63b37a65-b7c3-4a84-9338-ac04c14e5113\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"082e17e4-b3e2-4665-9c3d-b89f902ec370\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"349dfdd8-8192-4685-9d0e-c77311ee6bfa\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b07fb333-5575-42ac-bcfb-1d33dcbbc24a\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b07fb333-5575-42ac-bcfb-1d33dcbbc24a\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"22190811-2243-478b-9cde-63328e5b0d6e\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"22190811-2243-478b-9cde-63328e5b0d6e\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f9dff5c8-b1ca-4a7b-be0f-cb216ca01bc3\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f9dff5c8-b1ca-4a7b-be0f-cb216ca01bc3\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9853fc71-d6da-4cba-8052-c152b2070333\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"9853fc71-d6da-4cba-8052-c152b2070333\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"9853fc71-d6da-4cba-8052-c152b2070333\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"3827fcf3-a19a-4d49-a2a8-058028fb6341\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"3827fcf3-a19a-4d49-a2a8-058028fb6341\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"57421b0f-11f4-4865-868c-a412379c6a77\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"57421b0f-11f4-4865-868c-a412379c6a77\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"52e9d21c-8c33-4e42-a461-983c6d92b1af\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"52e9d21c-8c33-4e42-a461-983c6d92b1af\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9d3b6b8c-7db6-4418-99cd-22f449c074ee\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"9d3b6b8c-7db6-4418-99cd-22f449c074ee\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d040b3dd-22bf-4557-865a-816ec66e8cce\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d040b3dd-22bf-4557-865a-816ec66e8cce\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f2b92111-2fbb-40cf-afac-4155ceb05837\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f2b92111-2fbb-40cf-afac-4155ceb05837\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b470c21a-813d-40c9-bf21-e0b20bf5927c\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b470c21a-813d-40c9-bf21-e0b20bf5927c\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b48610a7-915d-4888-8cd6-cf2da7cbaaea\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b48610a7-915d-4888-8cd6-cf2da7cbaaea\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"76f3c599-0bf2-4f39-babc-8c2091a660b7\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"76f3c599-0bf2-4f39-babc-8c2091a660b7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"76f3c599-0bf2-4f39-babc-8c2091a660b7\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"4f801104-c353-444b-83e9-5949267ec472\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"4f801104-c353-444b-83e9-5949267ec472\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"a471e401-a261-4fc4-a60c-4c3fcd6477e8\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"a471e401-a261-4fc4-a60c-4c3fcd6477e8\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2ec9df05-8577-42a2-b24c-0caf7d8487f3\",\"message\":{\"method\":\"GET\",\"url\":\"/document/5e385cd8fd04fe50f4d186de/download\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"2ec9df05-8577-42a2-b24c-0caf7d8487f3\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Requested document with id 5e385cd8fd04fe50f4d186de"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Document with id 5e385cd8fd04fe50f4d186de was retrieved"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Access granted to document with id 5e385cd8fd04fe50f4d186de"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"8fc04cb9-bda2-4f39-880a-504764c8ff2d\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"8fc04cb9-bda2-4f39-880a-504764c8ff2d\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"c8069aa1-e8ad-4b61-ba53-e93d3ec8c5e5\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"c8069aa1-e8ad-4b61-ba53-e93d3ec8c5e5\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"c2441670-41a7-4104-8074-dc5319c3ce36\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"c2441670-41a7-4104-8074-dc5319c3ce36\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"5c978cf8-684c-4d16-bb79-8619f022da11\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"5c978cf8-684c-4d16-bb79-8619f022da11\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"5c978cf8-684c-4d16-bb79-8619f022da11\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"78708936-f42d-4b78-97ad-220263e4513d\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2f1e3821-d856-49c2-9c0f-1129ada59b2c\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"843fb24b-b32b-43d4-8040-074f8aa1c92d\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"64b08c40-84f1-408b-b43c-0453401fb485\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"64b08c40-84f1-408b-b43c-0453401fb485\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"0062ea52-e1cc-4f83-99d7-4d47e2b6c3a2\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"0062ea52-e1cc-4f83-99d7-4d47e2b6c3a2\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"327a344f-f114-4957-9208-480401802155\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"327a344f-f114-4957-9208-480401802155\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b2395584-7ff1-41ca-b743-a8bed098c53d\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b2395584-7ff1-41ca-b743-a8bed098c53d\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"b2395584-7ff1-41ca-b743-a8bed098c53d\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"50957090-1b8b-467c-8bc2-451271fdcca0\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"50957090-1b8b-467c-8bc2-451271fdcca0\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"346ddda9-4a20-43a6-97c0-a621a850bfe8\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"cef99980-03dd-4ad8-9287-db5893e1f62d\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"027e916b-62b7-475a-8553-d5ba6da7ff6e\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"915210d8-9709-4c23-9fed-2973514119e3\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"915210d8-9709-4c23-9fed-2973514119e3\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"1db7fec3-b76f-43f9-9f82-e2b1c376ad4f\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"1db7fec3-b76f-43f9-9f82-e2b1c376ad4f\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"6bed999b-af42-42c0-9bc2-4ddd6a1fbfed\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"6bed999b-af42-42c0-9bc2-4ddd6a1fbfed\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ee06c2c5-7273-4b27-b020-9818d3de70c9\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ee06c2c5-7273-4b27-b020-9818d3de70c9\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"ee06c2c5-7273-4b27-b020-9818d3de70c9\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"971ddd3c-bd0a-4a0d-8cfa-98207bc0b80b\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"971ddd3c-bd0a-4a0d-8cfa-98207bc0b80b\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"62a9c140-1d18-4209-964f-a9c83ec3af3b\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"62a9c140-1d18-4209-964f-a9c83ec3af3b\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"03cd44fc-b840-4cac-b39c-371d09b39c73\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"03cd44fc-b840-4cac-b39c-371d09b39c73\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"19a47eef-44e1-477a-80f9-c1b520900490\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"19a47eef-44e1-477a-80f9-c1b520900490\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"5a053882-65d3-48fa-a541-33bfd01e5c4b\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"785a2866-d2dc-47e2-a3f3-24072299f71a\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"7f41d01d-eebc-41db-9b9e-8da1ea8dc58d\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"eab867e2-c1a8-42c8-b106-81d758fd44cc\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"eab867e2-c1a8-42c8-b106-81d758fd44cc\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"41b53596-d287-46cf-a25d-1f96de7783aa\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"41b53596-d287-46cf-a25d-1f96de7783aa\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"24fd108d-98a5-4741-addc-c1f651d3321b\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"24fd108d-98a5-4741-addc-c1f651d3321b\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"767940dd-d7c5-4ef1-b408-4a127c072c2f\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"767940dd-d7c5-4ef1-b408-4a127c072c2f\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"83a231cb-f7dd-49ec-a4c5-b92180f2340b\",\"message\":{\"method\":\"POST\",\"url\":\"/auth/register\"}}"}
+{"app":"studyhub-backend","context":"controllerauth.js","level":"debug","message":"{\"uuid\":\"83a231cb-f7dd-49ec-a4c5-b92180f2340b\",\"message\":\"User AyeshaJamil1993, Email ayeshajamil18@outlook.com has been registered\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e39657a4ff15430ec12aa2e was requested"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Notifying user 5e39657a4ff15430ec12aa2e about subject: Your account has been created\nmessage: Hello Ayesha,\n\nyour account was successfully created.\nWe are very happy that you use our service :).\n\nBest regards\nYour DeDaS Team\n"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"8deebdf6-b538-4b21-b51f-08701d4d84d2\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"fa52dafc-2a2b-4291-b954-a99555251d1f\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"710a1382-344b-489a-ad47-6fb05e11ca34\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"230d11f2-842e-41ac-98d3-5ccd4f93a07d\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"230d11f2-842e-41ac-98d3-5ccd4f93a07d\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"86d9195a-62a8-462a-99d8-363b6dd58998\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"86d9195a-62a8-462a-99d8-363b6dd58998\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b3be3a36-6a88-4f1b-9797-91898d8ed6ba\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b3be3a36-6a88-4f1b-9797-91898d8ed6ba\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"add17947-c700-4ce5-b1dc-1dcafa756425\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"add17947-c700-4ce5-b1dc-1dcafa756425\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"add17947-c700-4ce5-b1dc-1dcafa756425\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"24382973-5f10-4f0b-90c1-dbf9f18c5cc3\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"24382973-5f10-4f0b-90c1-dbf9f18c5cc3\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"db60c1d0-a976-454c-baf6-4d4a9e3ac141\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"db60c1d0-a976-454c-baf6-4d4a9e3ac141\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"6e4aebb1-eb63-413d-9e9d-66e22680c8d1\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"6e4aebb1-eb63-413d-9e9d-66e22680c8d1\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580819836 g15sm22634203wro.65 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"06dfd6c9-3b1a-4865-a84b-c01066f374f5\",\"message\":{\"method\":\"GET\",\"url\":\"/kloudless/360354065/FkkMGm1AwfTHwy12FjUppqthpNcq_b99P45UFevdnLs5tBIHShUN7b8piMYhZ8n8L\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"06dfd6c9-3b1a-4865-a84b-c01066f374f5\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/kloudless.js","level":"info","message":"{\"uuid\":\"06dfd6c9-3b1a-4865-a84b-c01066f374f5\",\"message\":\"Kloudless download of file FkkMGm1AwfTHwy12FjUppqthpNcq_b99P45UFevdnLs5tBIHShUN7b8piMYhZ8n8L from account 360354065 requested\"}"}
+{"app":"studyhub-backend","context":"controller/kloudless.js","level":"debug","message":"{\"uuid\":\"06dfd6c9-3b1a-4865-a84b-c01066f374f5\",\"message\":\"Kloudless download succeeded. Pushing to client\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"fd8e7c1a-1f74-4cc7-8096-c79900eaed0e\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"fd8e7c1a-1f74-4cc7-8096-c79900eaed0e\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"303b5736-9fd6-4c0b-b5ab-5e999a4bf6fc\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"303b5736-9fd6-4c0b-b5ab-5e999a4bf6fc\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"bcb4dbe2-b621-4e52-8457-4b8363558773\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"bcb4dbe2-b621-4e52-8457-4b8363558773\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e1cf65ef-bef2-4f4f-9ed2-e00c645bc8ad\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e1cf65ef-bef2-4f4f-9ed2-e00c645bc8ad\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"3c2b417a-c48c-4f7a-a231-ce1868029ac4\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"3c2b417a-c48c-4f7a-a231-ce1868029ac4\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"fc476789-588a-4bce-9851-059669ebe56e\",\"message\":{\"method\":\"POST\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"fc476789-588a-4bce-9851-059669ebe56e\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e39657a4ff15430ec12aa2e was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e39657a4ff15430ec12aa2e was requested"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Notifying user 5e39657a4ff15430ec12aa2e about subject: Your document Health_care_Updated_2020 has been created\nmessage: Hello Ayesha,\n\nYour document Health_care_Updated_2020 has been created successfully.\n\nBest regards\nYour DeDaS Team\n"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580820104 e22sm3725104wme.45 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"7573903b-9c8d-4975-9221-1e76c9039fdd\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"7573903b-9c8d-4975-9221-1e76c9039fdd\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"6f1ed69e-b0ea-4637-9ebf-a6d02b661bfb\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"6f1ed69e-b0ea-4637-9ebf-a6d02b661bfb\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b7b45da8-d156-47b9-bada-955e435f91a1\",\"message\":{\"method\":\"GET\",\"url\":\"/user/checkEmail/dietz1993@gmail.com\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b7b45da8-d156-47b9-bada-955e435f91a1\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d416d808-eb4f-4c8b-b9fd-762f766caf10\",\"message\":{\"method\":\"PUT\",\"url\":\"/document/5e3966874ff15430ec12aa2f/privacy\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d416d808-eb4f-4c8b-b9fd-762f766caf10\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"cd19b0b2-6a5d-4300-870b-e86e2db20f33\",\"message\":{\"method\":\"POST\",\"url\":\"/accessgroup\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"cd19b0b2-6a5d-4300-870b-e86e2db20f33\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/accessGroup.js","level":"info","message":"{\"uuid\":\"cd19b0b2-6a5d-4300-870b-e86e2db20f33\",\"message\":\"AccessGroup for 5e3966874ff15430ec12aa2f with modifier [object Object] was created\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e39657a4ff15430ec12aa2e was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Notifying user 5e393b1e1c9fb5165010b29e about subject: The document Health_care_Updated_2020 has been shared with you privately\nmessage: Hello Aaron,\n\nThe user AyeshaJamil1993 has shared the document Health_care_Updated_2020 privately with you.\nYou can view the document at http://localhost:8000/document/5e3966874ff15430ec12aa2f \n\nBest regards\nYour DeDaS Team\n"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1580820131 p11sm17601906wrn.40 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"bed3e254-7f51-412e-8dec-8d896294c1b6\",\"message\":{\"method\":\"POST\",\"url\":\"/auth/login\"}}"}
+{"app":"studyhub-backend","context":"controllerauth.js","level":"debug","message":"{\"uuid\":\"bed3e254-7f51-412e-8dec-8d896294c1b6\",\"message\":\"User {\\n  _id: 5e393b1e1c9fb5165010b29e,\\n  username: 'Aaron1993',\\n  email: 'dietz1993@gmail.com',\\n  firstName: 'Aaron',\\n  lastName: 'Dietz',\\n  password: '$2a$08$KpOmvaaI3.0xo6m99NwxO.W9E.eRRiQ9dlfwtzrOTUaSC8Nl3yLSu',\\n  createdAt: 2020-02-04T09:36:30.597Z,\\n  updatedAt: 2020-02-04T09:52:02.231Z,\\n  lastLogin: 2020-02-04T09:52:02.230Z\\n} has logged in\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"a51a55a9-f584-4c3f-a3e1-35918c38bc26\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"4b9300f6-5f20-4f35-bc5c-d9f5b2e6e5b6\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ead0624f-50c1-4ce1-9f84-1b0f702dc539\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"78a7395b-057a-41fa-b0db-5f711f749b20\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"78a7395b-057a-41fa-b0db-5f711f749b20\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"9043612f-80ef-4a7e-b98b-a83f1b44c369\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"9043612f-80ef-4a7e-b98b-a83f1b44c369\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b89a5d26-1b82-4d5e-be64-e28838c4abd3\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b89a5d26-1b82-4d5e-be64-e28838c4abd3\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d03eba6f-1497-49eb-874a-0518d473a05a\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d03eba6f-1497-49eb-874a-0518d473a05a\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Requested document with id 5e3966874ff15430ec12aa2f"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"7d713587-4bb4-454f-a2bd-fce87d6a8625\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"7d713587-4bb4-454f-a2bd-fce87d6a8625\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Document with id 5e3966874ff15430ec12aa2f was retrieved"}
+{"app":"studyhub-backend","context":"controller/accessGroup.js","level":"debug","message":"Access for document 5e3966874ff15430ec12aa2f with modifier r,w for 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e5354feb-59d9-4105-b1b0-efb6cba1a174\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e5354feb-59d9-4105-b1b0-efb6cba1a174\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Access granted to document with id 5e3966874ff15430ec12aa2f"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e39657a4ff15430ec12aa2e was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ca2def1a-a02c-4777-a685-366317f5a311\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ca2def1a-a02c-4777-a685-366317f5a311\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"305ebad8-ed9f-453b-8e69-540c7d058d9d\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"305ebad8-ed9f-453b-8e69-540c7d058d9d\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e77b8a09-59f4-4e67-b88f-3ce853c80090\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e77b8a09-59f4-4e67-b88f-3ce853c80090\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Requested document with id 5e3966874ff15430ec12aa2f"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Document with id 5e3966874ff15430ec12aa2f was retrieved"}
+{"app":"studyhub-backend","context":"controller/accessGroup.js","level":"debug","message":"Access for document 5e3966874ff15430ec12aa2f with modifier r,w for 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Access granted to document with id 5e3966874ff15430ec12aa2f"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e39657a4ff15430ec12aa2e was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"87b9809e-8d94-4439-b5f7-5bf9a04cc9b6\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"87b9809e-8d94-4439-b5f7-5bf9a04cc9b6\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"347bd33b-1069-4f40-8072-6bafbeeaf7d6\",\"message\":{\"method\":\"GET\",\"url\":\"/document/5e3966874ff15430ec12aa2f\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"347bd33b-1069-4f40-8072-6bafbeeaf7d6\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Requested document with id 5e3966874ff15430ec12aa2f"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Document with id 5e3966874ff15430ec12aa2f was retrieved"}
+{"app":"studyhub-backend","context":"controller/accessGroup.js","level":"debug","message":"Access for document 5e3966874ff15430ec12aa2f with modifier r,w for 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Access granted to document with id 5e3966874ff15430ec12aa2f"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"55921e13-010e-4ff3-b06f-c4a648fb1f55\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"dc607e88-5fba-4bf4-af02-11f0fcbe2484\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"bab1a243-5c91-42ed-a496-ac3e0dc83a34\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"65b5b6cf-e262-4a94-acc1-4eb81b092c87\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"65b5b6cf-e262-4a94-acc1-4eb81b092c87\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e8634c87-d74d-45ed-918a-70ad296e41c0\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e8634c87-d74d-45ed-918a-70ad296e41c0\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"25e3e846-0d69-483c-85a3-726ad4b34f46\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"25e3e846-0d69-483c-85a3-726ad4b34f46\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"64c31db3-41f2-4559-9370-4881c18af3a5\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"64c31db3-41f2-4559-9370-4881c18af3a5\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Requested document with id 5e3966874ff15430ec12aa2f"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Document with id 5e3966874ff15430ec12aa2f was retrieved"}
+{"app":"studyhub-backend","context":"controller/accessGroup.js","level":"debug","message":"Access for document 5e3966874ff15430ec12aa2f with modifier r,w for 5e393b1e1c9fb5165010b29e was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Access granted to document with id 5e3966874ff15430ec12aa2f"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e39657a4ff15430ec12aa2e was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"3822c865-b611-465b-a7fb-b23efc97aff8\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"3822c865-b611-465b-a7fb-b23efc97aff8\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"34c9113e-6096-4eda-b368-13d3174b3340\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"34c9113e-6096-4eda-b368-13d3174b3340\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f094f27f-f4e7-4c4c-b43e-d9954f870c41\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f094f27f-f4e7-4c4c-b43e-d9954f870c41\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"32341cf8-1cc7-47aa-b68f-aeea08ca4423\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"32341cf8-1cc7-47aa-b68f-aeea08ca4423\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2aa149ae-2af9-4c8e-b671-e800ffce4261\",\"message\":{\"method\":\"GET\",\"url\":\"/document/5e385a86fd04fe50f4d1868a\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"2aa149ae-2af9-4c8e-b671-e800ffce4261\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Requested document with id 5e385a86fd04fe50f4d1868a"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Document with id 5e385a86fd04fe50f4d1868a was retrieved"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Access granted to document with id 5e385a86fd04fe50f4d1868a"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"a28cc920-2a50-4504-b1f5-f229a8cfa4ef\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"a28cc920-2a50-4504-b1f5-f229a8cfa4ef\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"05b9f17a-2b51-4391-892c-85a71ebb0a06\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"05b9f17a-2b51-4391-892c-85a71ebb0a06\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f360aab3-999c-4cb2-b123-f4703a9e65c2\",\"message\":{\"method\":\"GET\",\"url\":\"/document/5e385a86fd04fe50f4d1868a/download\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f360aab3-999c-4cb2-b123-f4703a9e65c2\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Requested document with id 5e385a86fd04fe50f4d1868a"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Document with id 5e385a86fd04fe50f4d1868a was retrieved"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"Access granted to document with id 5e385a86fd04fe50f4d1868a"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1592126126 l27sm6850940eja.118 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"4757b619-17b6-4d25-96c6-0bfb039fe093\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e01ad95a-f1eb-418e-b0ff-be4e4ccc2aa9\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e64e3e99-d351-49bb-a6b4-6f72d51ac2c7\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"c89d7394-5a6c-4ec3-a098-205acfee37d9\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"c89d7394-5a6c-4ec3-a098-205acfee37d9\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"dd0dc48b-f42a-4b92-b0cb-9ea0c00f01b8\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"dd0dc48b-f42a-4b92-b0cb-9ea0c00f01b8\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"aa2f7574-73ca-4500-a901-9f311a2a3e8e\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"aa2f7574-73ca-4500-a901-9f311a2a3e8e\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"3fe4de24-c762-4898-8d48-ad4a216859d5\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"3fe4de24-c762-4898-8d48-ad4a216859d5\",\"message\":\"Could not parse token from authorization header\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e5d6a9b8-6e89-4e2b-b726-317a1e9d5fb6\",\"message\":{\"method\":\"POST\",\"url\":\"/auth/register\"}}"}
+{"app":"studyhub-backend","context":"controllerauth.js","level":"debug","message":"{\"uuid\":\"e5d6a9b8-6e89-4e2b-b726-317a1e9d5fb6\",\"message\":\"User ayeshajamil, Email ayeshajamil18@outlook.com has been registered\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5ee5eb4bfb69af3e8cc5174e was requested"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Notifying user 5ee5eb4bfb69af3e8cc5174e about subject: Your account has been created\nmessage: Hello ayesha,\n\nyour account was successfully created.\nWe are very happy that you use our service :).\n\nBest regards\nYour DeDaS Team\n"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"be51f7c7-c1ac-4f34-97a1-6f1db6319ea3\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"61d0762b-7b70-488d-8475-4c06734dafc1\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"019b53d8-13a4-462a-8493-b6d91cddd5fe\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f6901c94-efe3-40c6-a918-b0f2d1636613\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f6901c94-efe3-40c6-a918-b0f2d1636613\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"13ffddb4-097f-42f9-9a3c-26c6d362bb1b\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"13ffddb4-097f-42f9-9a3c-26c6d362bb1b\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d3ef75b6-44ab-493b-9265-07eb253e5175\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d3ef75b6-44ab-493b-9265-07eb253e5175\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"85b80da8-d4e5-4afb-b348-9c8e60ce9112\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"85b80da8-d4e5-4afb-b348-9c8e60ce9112\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"85b80da8-d4e5-4afb-b348-9c8e60ce9112\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"cc0ebeae-c2c2-4920-87aa-07b1f304185a\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"cc0ebeae-c2c2-4920-87aa-07b1f304185a\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"notifier.js","level":"info","message":"Sending email was successful"}
+{"app":"studyhub-backend","context":"notifier.js","level":"debug","message":"Email server response was: 250 2.0.0 OK  1592126285 d35sm6280624edc.40 - gsmtp"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"fe5b2cb8-c37e-43ba-bc25-3be5e2b3c50c\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"fe5b2cb8-c37e-43ba-bc25-3be5e2b3c50c\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"08f3ac22-abe9-478f-afd2-e47f29d08d4d\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"08f3ac22-abe9-478f-afd2-e47f29d08d4d\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"c6fbc044-eace-441e-b6bf-b341f97f54f1\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"c6fbc044-eace-441e-b6bf-b341f97f54f1\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"4c621027-68ea-4e97-9958-1bf8ba175ddd\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"4c621027-68ea-4e97-9958-1bf8ba175ddd\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"d271fa1e-2b7f-4580-81ae-f8a4ba0c6a3b\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"d271fa1e-2b7f-4580-81ae-f8a4ba0c6a3b\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2f7be8d3-41d5-4680-b1e2-a9dd119592a7\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"2f7be8d3-41d5-4680-b1e2-a9dd119592a7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ab641bc3-5704-466c-a8d3-3aa962313c02\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ab641bc3-5704-466c-a8d3-3aa962313c02\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"5ba1c1c8-0db2-4887-b875-d8ec8e7e6fd7\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"5ba1c1c8-0db2-4887-b875-d8ec8e7e6fd7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"763a5208-e264-4043-9253-c5fca44d0cc7\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"763a5208-e264-4043-9253-c5fca44d0cc7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ebb97757-19f5-497f-ba9c-699f8371ed37\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ebb97757-19f5-497f-ba9c-699f8371ed37\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"dc58fcd3-d217-4c52-b2bd-606582a0b210\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"dc58fcd3-d217-4c52-b2bd-606582a0b210\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"26871bf4-11e8-4014-9761-94fd89eb7361\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"26871bf4-11e8-4014-9761-94fd89eb7361\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"7685e5c3-c1d9-4230-9e2c-b7d92a377770\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"7685e5c3-c1d9-4230-9e2c-b7d92a377770\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"39dea221-3ed7-45eb-8c20-5f64146cf0d6\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"39dea221-3ed7-45eb-8c20-5f64146cf0d6\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e8f59a62-7709-4425-8e71-177eb06d54c7\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e8f59a62-7709-4425-8e71-177eb06d54c7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e104a775-739a-4f78-b6df-66ccf4de66a3\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"6a3a5a9f-11ac-45f2-bbc7-8b5be81e41b7\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"66920775-e110-4fe2-93c6-4adf9ff6e29a\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"970069dc-3f49-486b-b62a-bf0b3d55b0e5\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"970069dc-3f49-486b-b62a-bf0b3d55b0e5\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"4ed50f24-4cab-4072-a987-e907f3ba6246\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"4ed50f24-4cab-4072-a987-e907f3ba6246\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"82db09d9-4646-47eb-8752-5e7e63b160e9\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"82db09d9-4646-47eb-8752-5e7e63b160e9\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"b215c8e2-8809-4c9d-b8d1-6da8ee266e1b\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"b215c8e2-8809-4c9d-b8d1-6da8ee266e1b\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"b215c8e2-8809-4c9d-b8d1-6da8ee266e1b\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f1a72718-0e63-4427-8e34-783f063adc85\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f1a72718-0e63-4427-8e34-783f063adc85\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e41edfc5-05ed-48a7-80e7-dea30429d6dd\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e41edfc5-05ed-48a7-80e7-dea30429d6dd\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"67d2566f-283e-4508-800d-ddf7e75eeb81\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"67d2566f-283e-4508-800d-ddf7e75eeb81\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e678ec82-dfb4-490b-9fe5-e9f5f731b497\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalUserCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"7faec99d-a209-4a4e-9e97-9ae147cc9e15\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e386f603-f5c7-48d2-825a-5a1f61481df9\",\"message\":{\"method\":\"GET\",\"url\":\"/stats/totalPublicDocumentCount\"}}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2d7f0b48-038f-49d6-bc1b-0900626bf3f7\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"2d7f0b48-038f-49d6-bc1b-0900626bf3f7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ed02f6e4-dfa4-4670-a6e3-f60619ee2860\",\"message\":{\"method\":\"GET\",\"url\":\"/document\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ed02f6e4-dfa4-4670-a6e3-f60619ee2860\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2da9a2b8-c8a8-4c51-8bb6-ad2c3426a82e\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedPublic\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"2da9a2b8-c8a8-4c51-8bb6-ad2c3426a82e\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"edb5d888-aa7d-4cb0-bc9a-18e4dbc79bee\",\"message\":{\"method\":\"GET\",\"url\":\"/document/sharedWithMe\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"edb5d888-aa7d-4cb0-bc9a-18e4dbc79bee\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"controller/document.js","level":"debug","message":"{\"uuid\":\"edb5d888-aa7d-4cb0-bc9a-18e4dbc79bee\",\"message\":\"Could not find document with id: undefined\"}"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e3859f5fd04fe50f4d18672 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385b98fd04fe50f4d186b0 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385dbcfd04fe50f4d18715 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e385ecdfd04fe50f4d18746 was requested"}
+{"app":"studyhub-backend","context":"controller/auth.js","level":"debug","message":"User 5e38583cfd04fe50f4d18629 was requested"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"2f1372f4-2ca6-425a-8919-d9ecdef7c9e7\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"2f1372f4-2ca6-425a-8919-d9ecdef7c9e7\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"97956eb6-dbec-4cb1-aa26-3330896c08be\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"97956eb6-dbec-4cb1-aa26-3330896c08be\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"e88f8c45-a68b-4725-8f38-70343bd9df15\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"e88f8c45-a68b-4725-8f38-70343bd9df15\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"115e215a-1d78-4adb-baba-54ae5a52ead1\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"115e215a-1d78-4adb-baba-54ae5a52ead1\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"1f19df91-c16c-4f27-8dee-1d0bbfc3ee38\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"1f19df91-c16c-4f27-8dee-1d0bbfc3ee38\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"0e1bc5ea-a39c-4484-816b-db7c14774469\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"0e1bc5ea-a39c-4484-816b-db7c14774469\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"fad0bfea-91d7-479a-a7f6-649baf816670\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"fad0bfea-91d7-479a-a7f6-649baf816670\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"ac056473-a10e-4f3e-839a-d21380c616a0\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"ac056473-a10e-4f3e-839a-d21380c616a0\",\"message\":\"Authentication successful\"}"}
+{"app":"studyhub-backend","context":"rest_collecter","level":"http","message":"{\"uuid\":\"f670dd7a-afcc-4a77-a03d-ef13d6d5245c\",\"message\":{\"method\":\"GET\",\"url\":\"/user\"}}"}
+{"app":"studyhub-backend","context":"middleware.js","level":"debug","message":"{\"uuid\":\"f670dd7a-afcc-4a77-a03d-ef13d6d5245c\",\"message\":\"Authentication successful\"}"}

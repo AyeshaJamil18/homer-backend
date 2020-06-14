@@ -1,0 +1,22 @@
+{
+	"title": "Drugs-2018",
+	"originalFilename": "Test.csv",
+	"data": [
+		{
+			"data": [
+				"14-0273",
+				"13-0102"
+			],
+			"title": "ID",
+			"orderPosition": "0"
+		},
+		{
+			"data": [
+				"qf+wIy8bRfwCsFcIBviDeI8FnHuOTbOuim4GS0sl33Q=",
+				"1T3oI46nuuFyhsvDHw9uz2gLmbypQlMSc9JV/Zs/uwM="
+			],
+			"title": "Date",
+			"orderPosition": "1"
+		}
+	]
+}

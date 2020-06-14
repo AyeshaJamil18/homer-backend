@@ -1,0 +1,11 @@
+{
+  "require": [
+    "./test/set-environment.js"
+  ],
+  "file": [
+    "./test/setup-server.js",
+    "./test/clean-database.js"
+  ],
+  "exit": true,
+  "recursive": true
+}
