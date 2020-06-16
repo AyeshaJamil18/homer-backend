@@ -26,6 +26,9 @@ const UserSchema = new mongoose.Schema({
     },
     lastLogin: {
         type: Date
+    },
+    registrationDate: {
+        type: Date
     }
 });
 
