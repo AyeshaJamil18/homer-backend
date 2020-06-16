@@ -9,6 +9,11 @@ const RecordSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    recordId: {
+        type: Number,
+        required: true,
+        unique: true
+    },
     totalPoints: {
         type: Number,
     },
