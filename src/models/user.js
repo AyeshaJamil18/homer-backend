@@ -35,8 +35,12 @@ const UserSchema = new mongoose.Schema({
         type: [String]
     },
     playlists: {
-        //playlists the user subscribed to
+        // playlists the user subscribed to
         type: [String]
+    },
+    group: {
+        // title of the group the user is member of
+        type: String
     }
 });
 
