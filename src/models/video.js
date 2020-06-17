@@ -20,6 +20,10 @@ const VideoSchema = new mongoose.Schema({
     },
     views: {
         type: Number
+    },
+    uploader: {
+        // adminUsername of the admin that uploaded the video
+        type: String
     }
 });
 
