@@ -29,6 +29,14 @@ const UserSchema = new mongoose.Schema({
     },
     registrationDate: {
         type: Date
+    },
+    friends: {
+        // usernames of friends
+        type: [String]
+    },
+    playlists: {
+        //playlists the user subscribed to
+        type: [String]
     }
 });
 

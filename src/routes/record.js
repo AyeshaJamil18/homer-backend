@@ -18,7 +18,7 @@ const recordController = require('../controllers/record');
  *
  * /record:
  *   get:
- *     description: Returns record data of current record
+ *     description: Returns record data
  *     tags: [Record]
  *     security:
  *     - BearerAuth: []

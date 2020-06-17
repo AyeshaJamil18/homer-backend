@@ -4,30 +4,30 @@ const express = require('express');
 const router = express.Router();
 
 const middleware = require('../middleware');
-const exerciseController = require('../controllers/exercise');
+const playlistController = require('../controllers/playlist');
 
 /**
  * @swagger
  * tags:
- *   name: Exercise
- *   description: Exercise
+ *   name: Playlist
+ *   description: Playlist
  */
 
 /**
  * @swagger
  *
- * /exercise:
+ * /playlist:
  *   get:
- *     description: Returns exercise data
- *     tags: [Exercise]
+ *     description: Returns playlist data
+ *     tags: [Playlist]
  *     security:
  *     - BearerAuth: []
  *     produces:
  *       - application/json
  *     responses:
  *       200:
- *         description: Found exercise data
+ *         description: Found playlist data
  */
-router.get('/', middleware.checkAuthentication, exerciseController.apiGetOwnData);
+router.get('/', middleware.checkAuthentication, playlistController.apiGetOwnData);
 
 module.exports = router;

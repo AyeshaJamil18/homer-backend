@@ -18,7 +18,7 @@ const videoController = require('../controllers/video');
  *
  * /video:
  *   get:
- *     description: Returns video data of current video
+ *     description: Returns video data
  *     tags: [video]
  *     security:
  *     - BearerAuth: []

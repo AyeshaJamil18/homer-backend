@@ -11,7 +11,7 @@ const getVideoById = (videoId) => {
 };
 
 const apiGetOwnData = (req, res) => {
-    videoModel.findById(req.videoId, 'username totalPoints streak level', {lean: true})
+    videoModel.findById(req.videoId, 'videoId videoTitle duration', {lean: true})
         .then(video => res.status(200).json(video));
 };
 
