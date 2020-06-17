@@ -12,6 +12,10 @@ const GroupSchema = new mongoose.Schema({
     members: {
         // usernames of the users that are members of the group
         type: [String]
+    },
+    groupLeaderboard: {
+        // name of the groupLeaderboard of the group
+        type: String
     }
 });
 

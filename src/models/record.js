@@ -4,13 +4,8 @@ const mongoose = require('mongoose');
 
 // Define the record schema
 const RecordSchema = new mongoose.Schema({
-    username: {
+    recordUsername: {
         type: String,
-        required: true,
-        unique: true
-    },
-    recordId: {
-        type: Number,
         required: true,
         unique: true
     },

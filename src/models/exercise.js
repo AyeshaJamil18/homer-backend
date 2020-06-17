@@ -12,9 +12,6 @@ const ExerciseSchema = new mongoose.Schema({
     videoId: {
         type: Number,
     },
-    recordId: {
-        type: Number
-    },
     completed: {
         type: Boolean
     },
