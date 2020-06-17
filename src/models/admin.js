@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 // Define the user schema
 const UserSchema = new mongoose.Schema({
-    username: {
+    adminUsername: {
         type: String,
         required: true,
         unique: true
@@ -30,17 +30,9 @@ const UserSchema = new mongoose.Schema({
     registrationDate: {
         type: Date
     },
-    friends: {
-        // usernames of friends
-        type: [String]
-    },
-    playlists: {
-        // playlists the user subscribed to
-        type: [String]
-    },
-    group: {
-        // title of the group the user is member of
-        type: String
+    uploads: {
+        // IDs of the uploaded videos
+        type: [Number]
     }
 });
 
