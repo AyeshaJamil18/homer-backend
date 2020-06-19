@@ -15,6 +15,16 @@ const user = require('./routes/user');
 const stats = require('./routes/stats');
 const kloudless = require('./routes/kloudless');
 const health = require('./routes/health');
+const admin = require('./routes/admin');
+const exercise = require('./routes/exercise');
+const globalLeaderboard = require('./routes/globalLeaderboard');
+const localLeaderboard = require('./routes/localLeaderboard');
+const group = require('./routes/group');
+const intervalReminder = require('./routes/intervalReminder');
+const oneTimeReminder = require('./routes/oneTimeReminder');
+const playlist = require('./routes/playlist');
+const record = require('./routes/record');
+const video = require('./routes/video');
 
 const swaggerDoc = require('./swaggerDoc');
 
@@ -47,6 +57,16 @@ api.use('/user', user);
 api.use('/stats', stats);
 api.use('/kloudless', kloudless);
 api.use('/health', health);
+api.use('/admin', admin);
+api.use('/exercise', exercise);
+api.use('/globalLeaderboard', globalLeaderboard);
+api.use('/localLeaderboard', localLeaderboard);
+api.use('/group', group);
+api.use('/intervalReminder', intervalReminder);
+api.use('/oneTimeReminder', oneTimeReminder);
+api.use('/playlist', playlist);
+api.use('/record', record);
+api.use('/video', video);
 
 // finally, setup swagger
 swaggerDoc(api);
