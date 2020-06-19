@@ -9,8 +9,6 @@ const logger = require('./logger')("rest_collecter");
 
 
 const auth = require('./routes/auth');
-const document = require('./routes/document');
-const accessGroup = require('./routes/accessGroup');
 const user = require('./routes/user');
 const stats = require('./routes/stats');
 const kloudless = require('./routes/kloudless');
@@ -51,8 +49,6 @@ api.use(logger.logRestCall);
 
 // API routes
 api.use('/auth', auth);
-api.use('/document', document);
-api.use('/accessgroup', accessGroup);
 api.use('/user', user);
 api.use('/stats', stats);
 api.use('/kloudless', kloudless);

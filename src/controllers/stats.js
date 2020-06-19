@@ -1,7 +1,6 @@
 "use strict";
 
 const userModel = require('../models/user');
-const documentModel = require('../models/document');
 
 const apiGetTotalUserCount = (req, res) => { // could also use estimatedDocumentCount()
     userModel.countDocuments().then(count => respondWithCount(res, count));
@@ -12,7 +11,5 @@ const respondWithCount = (res, count) => {
 };
 
 module.exports = {
-    apiGetTotalDocumentCount,
-    apiGetTotalPublicDocumentCount,
     apiGetTotalUserCount
 };
