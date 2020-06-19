@@ -46,7 +46,7 @@ const apiFindUserByUsername = (req, res) => {
 
     userModel.find({username: req.params['username']})
         .then(user => (user && user.length > 0) ?
-            user[0].id === req.userId ? res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:true})
+            user[0].username === req.params['username'] ? res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:true})
                 : res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:false})
             : res.status(404).send({username: null, userId: null, isExist: false}))
 };
@@ -57,5 +57,6 @@ module.exports = {
     apiFindUserByUsername,
     apiResolveIdToName,
     apiGetOwnData,
-    apiCheckUserEmail
+    apiCheckUserEmail,
+    apiAddFriend
 };

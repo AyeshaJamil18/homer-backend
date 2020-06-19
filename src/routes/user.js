@@ -57,6 +57,7 @@ router.get('/', middleware.checkAuthentication, userController.apiGetOwnData);
  */
 router.get('/:userId', middleware.checkAuthentication, userController.apiResolveIdToName);
 
+// TODO: rename endpoint to "findUserByUsername" and update frontend accordingly
 router.get('/getUserByUsername/:username', middleware.checkAuthentication, userController.apiFindUserByUsername);
 
 router.get('/checkEmail/:userEmail', middleware.checkAuthentication, userController.apiCheckUserEmail);
