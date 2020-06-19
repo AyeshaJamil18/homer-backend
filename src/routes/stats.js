@@ -12,39 +12,6 @@ const statsController = require('../controllers/stats');
  *   description: Statics
  */
 
-/**
- * @swagger
- *
- * /stats/totalDocumentCount:
- *   get:
- *     description: Returns count of all documents
- *     tags: [Stats]
- *     security:
- *     - BearerAuth: []
- *     produces:
- *       - application/json
- *     responses:
- *       200:
- *         description: Counting successful and returning result
- */
-router.get('/totalDocumentCount', statsController.apiGetTotalDocumentCount);
-
-/**
- * @swagger
- *
- * /stats/totalPublicDocumentCount:
- *   get:
- *     description: Returns count of documents which contain private = false
- *     tags: [Stats]
- *     security:
- *     - BearerAuth: []
- *     produces:
- *       - application/json
- *     responses:
- *       200:
- *         description: Counting successful and returning result
- */
-router.get('/totalPublicDocumentCount', statsController.apiGetTotalPublicDocumentCount);
 
 /**
  * @swagger
