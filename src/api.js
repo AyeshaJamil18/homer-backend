@@ -31,7 +31,7 @@ api.use(middleware.allowCrossDomain);
 // Basic route
 api.get('/', (req, res) => {
     res.json({
-        name: 'dedas-Backend running!',
+        name: 'homer-Backend running!',
         documentation: "http://localhost:3000/api-docs"
     });
 });

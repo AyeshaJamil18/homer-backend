@@ -10,7 +10,7 @@ const getEmptyTemplate = () => {
 const greetingMessage = (firstName) => "Hello " + firstName + ",\n\n";
 
 const farewellMessage = () => "\nBest regards\n" +
-    "Your DeDaS Team\n";
+    "Your Homer Team\n";
 
 const accountCreated = (firstName) => {
     const template = getEmptyTemplate();
