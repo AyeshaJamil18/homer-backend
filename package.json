@@ -1,19 +1,15 @@
 {
-  "name": "dedas-backend",
+  "name": "homer-backend",
   "version": "1.0.0",
-  "description": "dedas backend as a service",
+  "description": "homer backend as a service",
   "main": "index.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/sebischair/sebamaster-movie-backend.git"
+    "url": "https://github.com/AyeshaJamil18/homer-backend.git"
   },
-  "author": "sebischair",
+  "author": "Jonas Engeler, Matthias Fesl, Ayesha Jamil, Kiran Tauqir",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sebischair/sebamaster-movie-backend/issues"
-  },
-  "homepage": "ttps://github.com/sebischair/sebamaster-movie-backend.git#readme",
   "scripts": {
     "test": "mocha",
     "coverage": "nyc npm run test",
