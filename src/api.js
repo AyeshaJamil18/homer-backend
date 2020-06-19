@@ -9,8 +9,6 @@ const logger = require('./logger')("rest_collecter");
 
 
 const auth = require('./routes/auth');
-const document = require('./routes/document');
-const accessGroup = require('./routes/accessGroup');
 const user = require('./routes/user');
 const stats = require('./routes/stats');
 const kloudless = require('./routes/kloudless');
@@ -18,7 +16,7 @@ const health = require('./routes/health');
 const admin = require('./routes/admin');
 const exercise = require('./routes/exercise');
 const globalLeaderboard = require('./routes/globalLeaderboard');
-const localLeaderboard = require('./routes/localLeaderboard');
+const groupLeaderboard = require('./routes/groupLeaderboard');
 const group = require('./routes/group');
 const intervalReminder = require('./routes/intervalReminder');
 const oneTimeReminder = require('./routes/oneTimeReminder');
@@ -51,8 +49,6 @@ api.use(logger.logRestCall);
 
 // API routes
 api.use('/auth', auth);
-api.use('/document', document);
-api.use('/accessgroup', accessGroup);
 api.use('/user', user);
 api.use('/stats', stats);
 api.use('/kloudless', kloudless);
@@ -60,7 +56,7 @@ api.use('/health', health);
 api.use('/admin', admin);
 api.use('/exercise', exercise);
 api.use('/globalLeaderboard', globalLeaderboard);
-api.use('/localLeaderboard', localLeaderboard);
+api.use('/groupLeaderboard', groupLeaderboard);
 api.use('/group', group);
 api.use('/intervalReminder', intervalReminder);
 api.use('/oneTimeReminder', oneTimeReminder);

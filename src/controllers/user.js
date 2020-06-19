@@ -39,8 +39,22 @@ const apiCheckUserEmail = (req, res) => {
             : res.status(404).send({email: null, userId: null, isExist: false}))
 };
 
+const apiFindUserByUsername = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['username'], req, res)) {
+        return;
+    }
+
+    userModel.find({username: req.params['username']})
+        .then(user => (user && user.length > 0) ?
+            user[0].id === req.userId ? res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:true})
+                : res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:false})
+            : res.status(404).send({username: null, userId: null, isExist: false}))
+};
+
+
 module.exports = {
     getUserById,
+    apiFindUserByUsername,
     apiResolveIdToName,
     apiGetOwnData,
     apiCheckUserEmail

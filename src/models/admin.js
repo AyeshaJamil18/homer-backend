@@ -2,8 +2,8 @@
 
 const mongoose = require('mongoose');
 
-// Define the user schema
-const UserSchema = new mongoose.Schema({
+// Define the admin schema
+const AdminSchema = new mongoose.Schema({
     adminUsername: {
         type: String,
         required: true,
@@ -36,7 +36,7 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-UserSchema.set('versionKey', false);
-UserSchema.set('timestamps', true);
+AdminSchema.set('versionKey', false);
+AdminSchema.set('timestamps', true);
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('Admin', AdminSchema);
