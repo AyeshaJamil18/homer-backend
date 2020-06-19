@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 // Define the globalLeaderboard schema
-const GroupLeaderboardSchema = new mongoose.Schema({
+const GlobalLeaderboardSchema = new mongoose.Schema({
     records: {
         // recordUsernames
         type: [String]
@@ -14,7 +14,7 @@ const GroupLeaderboardSchema = new mongoose.Schema({
     }
 });
 
-GroupLeaderboardSchema.set('versionKey', false);
-GroupLeaderboardSchema.set('timestamps', true);
+GlobalLeaderboardSchema.set('versionKey', false);
+GlobalLeaderboardSchema.set('timestamps', true);
 
-module.exports = mongoose.model('GroupLeaderboard', GroupLeaderboardSchema);
+module.exports = mongoose.model('GlobalLeaderboard', GlobalLeaderboardSchema);
