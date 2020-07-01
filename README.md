@@ -1,6 +1,6 @@
-# sebamaster-movie-backend application
+# homer-backend application
 
-sebamaster-movie-frontend application can be found [here](https://github.com/sebischair/sebamaster-movie-frontend)
+homerfrontend application can be found [here](https://github.com/AyeshaJamil18/homer-frontend)
 
 ## Prerequisites
 
