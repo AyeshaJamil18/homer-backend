@@ -5,8 +5,8 @@
     "logger": {
       "logLevel": "silly"
     },
-    "email": "notification.dedas@gmail.com",
-    "emailPass": "1Nk3KCM9oAkp01QWIF0g",
+    "email": "notifications.homer@gmail.com",
+    "emailPass": "vsbezxlmnzvdwdcl",
     "mongoURI": "mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
     "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
     "frontendUrl": "http://localhost:8000"
@@ -17,9 +17,9 @@
     "logger": {
       "logLevel": "debug"
     },
-    "email": "notification.dedas@gmail.com",
-    "emailPass": "1Nk3KCM9oAkp01QWIF0g",
-    "mongoURI": "mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
+    "email": "notifications.homer@gmail.com",
+    "emailPass": "vsbezxlmnzvdwdcl",
+    "mongoURI":"mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
     "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
     "frontendUrl": "http://localhost:8000"
   },
@@ -29,9 +29,9 @@
     "logger": {
       "logLevel": "info"
     },
-    "email": "notification.dedas@gmail.com",
-    "emailPass": "1Nk3KCM9oAkp01QWIF0g",
-    "mongoURI": "mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
+    "email": "notifications.homer@gmail.com",
+    "emailPass": "vsbezxlmnzvdwdcl",
+    "mongoURI":"mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
     "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
     "frontendUrl": "http://localhost:8000"
   }
