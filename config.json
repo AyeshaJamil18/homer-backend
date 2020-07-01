@@ -7,7 +7,7 @@
     },
     "email": "notifications.homer@gmail.com",
     "emailPass": "vsbezxlmnzvdwdcl",
-    "mongoURI": "mongodb://localhost:27017/homer-dev",
+    "mongoURI": "mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
     "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
     "frontendUrl": "http://localhost:8000"
   },
@@ -19,7 +19,7 @@
     },
     "email": "notifications.homer@gmail.com",
     "emailPass": "vsbezxlmnzvdwdcl",
-    "mongoURI": "mongodb://localhost:27017/homer-test",
+    "mongoURI":"mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
     "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
     "frontendUrl": "http://localhost:8000"
   },
@@ -31,7 +31,7 @@
     },
     "email": "notifications.homer@gmail.com",
     "emailPass": "vsbezxlmnzvdwdcl",
-    "mongoURI": "mongodb://localhost:27017/homer-prod",
+    "mongoURI":"mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
     "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
     "frontendUrl": "http://localhost:8000"
   }
