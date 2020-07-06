@@ -62,6 +62,6 @@ router.get('/getUserByUsername/:username', middleware.checkAuthentication, userC
 
 router.get('/checkEmail/:userEmail', middleware.checkAuthentication, userController.apiCheckUserEmail);
 
-router.put('/addFriend/:friendUsername', middleware.checkAuthentication, userController.apiAddFriend)
+router.post('/addFriend', middleware.checkAuthentication, userController.apiAddFriend)
 
 module.exports = router;

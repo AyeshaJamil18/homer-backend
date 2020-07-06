@@ -3,7 +3,7 @@
 const logger = require('../logger')('controller/util.js');
 
 const checkForMissingVariablesInBody = (body, varList) =>
-    varList.filter(x => !Object.prototype.hasOwnProperty.call(body, x)).join(",");
+    varList.filter(x => !Object.prototype.hasOwnProperty.call(body, x)).join(", ");
 
 const checkForMissingVariablesInBodyElseSendResponseAndFalse = (body, varList, req, res) => {
     const missingArgumentsDocument = checkForMissingVariablesInBody(body, varList);
