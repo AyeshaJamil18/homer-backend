@@ -4,7 +4,7 @@ const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util
 
 const adminModel = require('../models/admin');
 
-const logger = require('../logger')("controller/auth.js");
+const logger = require('../logger')("controller/AdminAuth.js");
 
 const getAdminById = (adminId) => {
     logger.debug("Admin " + adminId + " was requested");
