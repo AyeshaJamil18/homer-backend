@@ -62,6 +62,29 @@ router.get('/getUserByUsername/:username', middleware.checkAuthentication, userC
 
 router.get('/checkEmail/:userEmail', middleware.checkAuthentication, userController.apiCheckUserEmail);
 
+/**
+ * @swagger
+ *
+ * /user/addFriend:
+ *   POST:
+ *     description: Adds another user to your friend list and adds yourself to the friend list of this user
+ *     tags: [User]
+ *     security:
+ *     - BearerAuth: []
+ *     parameters:
+ *       - in: body
+ *         name: username
+ *         description: The username of the friend you want to add
+ *         required: true
+ *         schema:
+ *           type: string
+ *           example: user123
+ *     responses:
+ *       200:
+ *         description: Successfull
+ *       404:
+ *         description: The specified user wasn't found
+ */
 router.post('/addFriend', middleware.checkAuthentication, userController.apiAddFriend)
 
 module.exports = router;
