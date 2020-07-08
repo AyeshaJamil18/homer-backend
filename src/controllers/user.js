@@ -25,6 +25,9 @@ const apiResolveIdToName = (req, res) => {
     userModel.findById(req.params['userId'])
         .then(user => user ?
             res.status(200).send({username: user.username}) : res.status(404).send("Not found"))
+        .catch(err => {
+            res.status(500).send();
+        })
 };
 
 const apiCheckUserEmail = (req, res) => {
@@ -72,6 +75,26 @@ const apiAddFriend = (req, res) => {
         });
 };
 
+const searchUser = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['match'], req, res)) {
+        return;
+    }
+
+    userModel.find({
+        $expr: {
+            $regexMatch: {
+                input: { $concat: [ "$firstName", " ", "$lastName" ] },
+                regex: req.body.match,
+                options: "i"
+            }
+        }
+    }).then(result => {
+        res.status(200).json(result);
+    }).catch(err => {
+        res.status(500).send("Internal Error");
+    });
+}
+
 
 module.exports = {
     getUserById,
@@ -79,5 +102,6 @@ module.exports = {
     apiResolveIdToName,
     apiGetOwnData,
     apiCheckUserEmail,
-    apiAddFriend
+    apiAddFriend,
+    searchUser
 };

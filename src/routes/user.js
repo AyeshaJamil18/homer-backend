@@ -55,12 +55,14 @@ router.get('/', middleware.checkAuthentication, userController.apiGetOwnData);
  *       404:
  *         description: No document for this id found
  */
-router.get('/:userId', middleware.checkAuthentication, userController.apiResolveIdToName);
+//router.get('/:userId', middleware.checkAuthentication, userController.apiResolveIdToName);
 
 // TODO: rename endpoint to "findUserByUsername" and update frontend accordingly
 router.get('/getUserByUsername/:username', middleware.checkAuthentication, userController.apiFindUserByUsername);
 
 router.get('/checkEmail/:userEmail', middleware.checkAuthentication, userController.apiCheckUserEmail);
+
+router.get('/search', middleware.checkAuthentication, userController.searchUser);
 
 /**
  * @swagger
@@ -85,6 +87,6 @@ router.get('/checkEmail/:userEmail', middleware.checkAuthentication, userControl
  *       404:
  *         description: The specified user wasn't found
  */
-router.post('/addFriend', middleware.checkAuthentication, userController.apiAddFriend)
+router.post('/addFriend', middleware.checkAuthentication, userController.apiAddFriend);
 
 module.exports = router;
