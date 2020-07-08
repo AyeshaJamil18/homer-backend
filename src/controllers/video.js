@@ -1,22 +1,34 @@
 "use strict";
 
+
 const videoModel = require('../models/video');
 
-const logger = require('../logger')("controller/auth.js");
+const logger = require('../logger')("controller/video.js");
+const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util");
 
-const getVideoById = (videoId) => {
-    logger.debug("Video " + videoId + " was requested");
 
-    return videoModel.findById(videoId);
+const SaveVideo = (req, res) => {
+    const Video = Object.assign(req.body);
+
+    videoModel.create(Video)
+        .then(dbUser => {
+            logger.debugWithUuid(req, "Video  " + dbUser.videoTitle+ " has been stored");
+            res.status(200).json(dbUser)
+        })
+        .catch(error => {
+
+                logger.errorWithUuid(req, error.message);
+
+                res.status(500).json({
+                    error: 'Internal server error',
+                    message: error.message
+                })
+
+        });
 };
-
-const apiGetOwnData = (req, res) => {
-    videoModel.findById(req.videoId, 'videoId videoTitle duration', {lean: true})
-        .then(video => res.status(200).json(video));
-};
-
 
 module.exports = {
+    SaveVideo,
     getVideoById,
     apiGetOwnData
 };
