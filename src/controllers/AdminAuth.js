@@ -37,7 +37,7 @@ const login = (req, res) => {
 
                 // if user is found and password is valid
                 // create a token
-                const token = jwt.sign({id: user._id, email: user.email, adminUsername: user.adminUsername},
+                const token = jwt.sign({id: user._id, email: user.email, username: user.username},
                     config.jwtSecret, {
                         expiresIn: 86400 // expires in 24 hours
                     });
@@ -65,13 +65,13 @@ const login = (req, res) => {
 
 const register = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body,
-        ['adminUsername', 'email', 'firstName', 'lastName', 'password'], req, res)) {
+        ['username', 'email', 'firstName', 'lastName', 'password'], req, res)) {
         return;
     }
 
     // validation
     const complaintList = [
-        [!validator.isAlphanumeric(req.body['adminUsername']), "Username is not alpha numeric"],
+        [!validator.isAlphanumeric(req.body['username']), "Username is not alpha numeric"],
         [!validator.isEmail(req.body['email']), "Email is not valid"],
         [!validator.isLength(req.body['password'], {min: 8, max: 30}),
             "Password is to long or to short. Minimum 8, Maximum 30"],
@@ -91,7 +91,7 @@ const register = (req, res) => {
 
     UserModel.create(user)
         .then(dbUser => {
-            logger.debugWithUuid(req, "User " + dbUser.adminUsername + ", Email " + dbUser.email + " has been registered");
+            logger.debugWithUuid(req, "User " + dbUser.username + ", Email " + dbUser.email + " has been registered");
 
             // if user is registered without errors
             // create a token
@@ -112,7 +112,7 @@ const register = (req, res) => {
                 let descriptionMsg;
                 let conflictField;
                 let errorCode;
-                if (error.keyValue.hasOwnProperty('adminUsername') || error.keyValue.hasOwnProperty('adminUsername')) {
+                if (error.keyValue.hasOwnProperty('username') || error.keyValue.hasOwnProperty('username')) {
                     errorMsg = 'Username exists';
                     descriptionMsg = 'Username: ' + req.body['username'] + ' already exists';
                     errorCode = 409;

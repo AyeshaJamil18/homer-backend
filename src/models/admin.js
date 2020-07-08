@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 // Define the admin schema
 const AdminSchema = new mongoose.Schema({
-    adminUsername: {
+    username: {
         type: String,
         required: true,
         unique: true
