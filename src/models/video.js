@@ -4,16 +4,14 @@ const mongoose = require('mongoose');
 
 // Define the video schema
 const VideoSchema = new mongoose.Schema({
-    videoId: {
-        type: Number,
-        required: true,
-        unique: true
-    },
     videoTitle: {
         type: String,
     },
     keywords: {
-        type: [String]
+        type: String
+    },
+    videoUrl: {
+        type: String
     },
     duration: {
         type: Number

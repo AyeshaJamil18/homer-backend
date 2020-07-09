@@ -4,17 +4,18 @@ const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util
 
 const adminModel = require('../models/admin');
 
-const logger = require('../logger')("controller/auth.js");
+const logger = require('../logger')("controller/AdminAuth.js");
 
-const getAdminById = (adminId) => {
-    logger.debug("Admin " + adminId + " was requested");
+const getAdminById = (userId) => {
+    logger.debug("Admin " + userId + " was requested");
 
-    return adminModel.findById(adminId);
+    return adminModel.findById(userId);
 };
 
 const apiGetOwnData = (req, res) => {
-    adminModel.findById(req.adminId, 'adminUsername email firstName lastName', {lean: true})
-        .then(admin => res.status(200).json(admin));
+    logger.debug("Admin " + req.userId + " was requested");
+    adminModel.findById(req.userId, 'username email firstName lastName', {lean: true})
+        .then(user => res.status(200).json(user));
 };
 
 const apiResolveIdToName = (req, res) => {

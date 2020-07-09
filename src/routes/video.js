@@ -28,6 +28,7 @@ const videoController = require('../controllers/video');
  *       200:
  *         description: Found video data
  */
-router.get('/', middleware.checkAuthentication, videoController.apiGetOwnData);
+
+router.post('/SaveVideo', videoController.SaveVideo);
 
 module.exports = router;
