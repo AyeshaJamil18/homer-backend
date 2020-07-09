@@ -30,6 +30,5 @@ const videoController = require('../controllers/video');
  */
 
 router.post('/SaveVideo', videoController.SaveVideo);
-router.get('/', middleware.checkAuthentication, videoController.apiGetOwnData);
 
 module.exports = router;

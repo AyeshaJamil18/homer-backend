@@ -28,7 +28,5 @@ const SaveVideo = (req, res) => {
 };
 
 module.exports = {
-    SaveVideo,
-    getVideoById,
-    apiGetOwnData
+    SaveVideo
 };
