@@ -62,7 +62,7 @@ router.get('/getUserByUsername/:username', middleware.checkAuthentication, userC
 
 router.get('/checkEmail/:userEmail', middleware.checkAuthentication, userController.apiCheckUserEmail);
 
-router.get('/search', middleware.checkAuthentication, userController.searchUser);
+router.get('/search/:match', middleware.checkAuthentication, userController.searchUser);
 
 /**
  * @swagger
