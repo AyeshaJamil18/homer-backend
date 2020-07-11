@@ -76,7 +76,7 @@ const apiAddFriend = (req, res) => {
 };
 
 const searchUser = (req, res) => {
-    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['match'], req, res)) {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['match'], req, res)) {
         return;
     }
 
@@ -84,7 +84,7 @@ const searchUser = (req, res) => {
         $expr: {
             $regexMatch: {
                 input: { $concat: [ "$firstName", " ", "$lastName" ] },
-                regex: req.body.match,
+                regex: req.params.match,
                 options: "i"
             }
         }
