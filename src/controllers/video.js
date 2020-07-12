@@ -35,14 +35,10 @@ const GetVideoByTag = (req, res) => {
 
 
     videoModel.findOne({keywords: req.params['tag']}).then(data => {
-
-
         logger.debug("video " + data.videoTitle);
         res.status(200).send({videoTitle: data.videoTitle, videoUrl: data.videoUrl});
-
     }).catch(error => {
         logger.debug(error);}
-
     );
 
 };
