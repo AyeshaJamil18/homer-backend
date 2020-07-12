@@ -31,13 +31,15 @@ const SaveVideo = (req, res) => {
 
 const GetVideoByTag = (req, res) => {
 
-    logger.debug("Requested document with id " + req.body.tag);
+    logger.debug("Requested document with id " + req.params['tag']);
 
 
-    videoModel.findOne({keywords: req.body.tag} ).then(data => {
+    videoModel.findOne({keywords: req.params['tag']}).then(data => {
 
-        logger.debug("video " + data);
-        return Promise.resolve(data);
+
+        logger.debug("video " + data.videoTitle);
+        res.status(200).send({videoTitle: data.videoTitle, videoUrl: data.videoUrl});
+
     }).catch(error => {
         logger.debug(error);}
 
