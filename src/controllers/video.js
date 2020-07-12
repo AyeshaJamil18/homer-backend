@@ -27,6 +27,28 @@ const SaveVideo = (req, res) => {
         });
 };
 
+
+
+const GetVideoByTag = (req, res) => {
+
+    logger.debug("Requested document with id " + req.body.tag);
+
+
+    videoModel.findOne({keywords: req.body.tag} ).then(data => {
+
+        logger.debug("video " + data);
+        return Promise.resolve(data);
+    }).catch(error => {
+        logger.debug(error);}
+
+    );
+
+};
+
+
+
 module.exports = {
-    SaveVideo
+    SaveVideo,
+    GetVideoByTag
+
 };

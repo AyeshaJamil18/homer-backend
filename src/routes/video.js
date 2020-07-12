@@ -30,5 +30,6 @@ const videoController = require('../controllers/video');
  */
 
 router.post('/SaveVideo', videoController.SaveVideo);
+router.get('/GetVideo/:tag', videoController.GetVideoByTag);
 
 module.exports = router;
