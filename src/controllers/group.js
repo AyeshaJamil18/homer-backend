@@ -1,22 +1,65 @@
 "use strict";
 
+const userModel = require('../models/user');
 const groupModel = require('../models/group');
 
+const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util");
 const logger = require('../logger')("controller/auth.js");
 
+/*
 const getGroupById = (groupId) => {
     logger.debug("Group " + groupId + " was requested");
 
     return groupModel.findById(groupId);
-};
+}; */
 
-const apiGetOwnData = (req, res) => {
-    groupModel.findById(req.groupId, 'title members', {lean: true})
+const group = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title'], req, res)) {
+        return;
+    }
+
+    groupModel.findOne({ title: req.params.title }, 'title members')
         .then(group => res.status(200).json(group));
 };
 
+const add = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title', 'user'], req, res)) {
+        return;
+    }
+    logger.debug("User " + req.params.user + " is added to the group " + req.params.title);
+
+    userModel.findOneAndUpdate({ username: req.params.user }, { $addToSet: { groups: req.params.title }})
+        .then(user => {
+            groupModel.findOneAndUpdate({ title: req.params.title }, { $addToSet: { members: user.username}})
+                .then(() => { res.status(200).send(); });
+        })
+        .catch(err => {
+            logger.error(err);
+            res.status(500).send("Internal Error");
+        });
+}
+
+const remove = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title', 'user'], req, res)) {
+        return;
+    }
+    logger.debug("User " + req.params.user + " is removed from the group " + req.params.title);
+
+    userModel.findOneAndUpdate({ username: req.params.user }, { $pull: { groups: req.params.title }})
+        .then(user => {
+            groupModel.findOneAndUpdate({ title: req.params.title }, { $pull: { members: user.username}})
+                .then(() => { res.status(200).send(); });
+        })
+        .catch(err => {
+            logger.error(err);
+            res.status(500).send("Internal Error");
+        });
+}
+
 
 module.exports = {
-    getGroupById,
-    apiGetOwnData
+    //getGroupById,
+    group,
+    add,
+    remove
 };
