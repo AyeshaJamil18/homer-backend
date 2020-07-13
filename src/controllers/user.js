@@ -95,6 +95,11 @@ const searchUser = (req, res) => {
     });
 }
 
+const groups = (req, res) => {
+    userModel.findById(req.userId, 'groups')
+        .then(result => res.status(200).json(result.groups));
+}
+
 
 module.exports = {
     getUserById,
@@ -103,5 +108,6 @@ module.exports = {
     apiGetOwnData,
     apiCheckUserEmail,
     apiAddFriend,
-    searchUser
+    searchUser,
+    groups
 };

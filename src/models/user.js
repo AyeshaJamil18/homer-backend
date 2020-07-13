@@ -38,9 +38,9 @@ const UserSchema = new mongoose.Schema({
         // playlists the user subscribed to
         type: [String]
     },
-    group: {
-        // title of the group the user is member of
-        type: String
+    groups: {
+        // titles of the groups the user is a member of
+        type: [String]
     }
 });
 
