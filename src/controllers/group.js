@@ -62,28 +62,38 @@ const invite = (req, res) => {
     }
     logger.debug("Inviting " + req.params.user + " to the group " + req.params.title);
 
-    userModel.findOne({ username: req.params.user })
-        .then(user => {
-            groupModel.findOneAndUpdate({ title: req.params.title }, { $addToSet: { invited: user.username}})
-                .then(() => { res.status(200).send(); });
-        })
-        .catch(err => {
-            logger.error(err);
-            res.status(500).send("Internal Error");
-        });
+    userModel.findById(req.userId).then(invitator => {
+        userModel.findOne({ username: req.params.user })
+            .then(invitationist => {
+                groupModel.findOneAndUpdate({ $and: [ {title: req.params.title}, { members: invitator.username}, { $not: {members: invitationist.username}}] },
+                    { $addToSet: { invited: invitationist.username}})
+                    .then(() => { res.status(200).send(); })
+                    .catch(err => {
+                        logger.error(err);
+                        res.status(404).send("Group not found or invitator not member of the group or invited user already in the group.");
+                    })
+            })
+            .catch(err => {
+                logger.error(err);
+                res.status(404).send("User not found.");
+            });
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    })
 }
 
 const join = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title'], req, res)) {
         return;
     }
-    logger.debug("User " + req.params.user + " joins the group " + req.params.title);
+    logger.debug("User " + req.userId + " joins the group " + req.params.title);
 
     userModel.findById(req.userId)
         .then(user => {
             groupModel.findOneAndUpdate(
                 { $and: [{title: req.params.title}, {invited: user.username}]},
-                [{ $addToSet: { members: user.username } }, { $pull: { invited: user.username }}])
+                { $addToSet: { members: user.username }, $pull: { invited: user.username }})
                 .then(() => { res.status(200).send(); })
                 .catch(err => {
                     logger.error(err);
@@ -97,7 +107,26 @@ const join = (req, res) => {
 }
 
 const leave = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title'], req, res)) {
+        return;
+    }
+    logger.debug("User " + req.userId + " leaves the group " + req.params.title);
 
+    userModel.findById(req.userId)
+        .then(user => {
+            groupModel.findOneAndUpdate(
+                { $and: [{title: req.params.title}, {members: user.username}]},
+                { $pull: { members: user.username }})
+                .then(() => { res.status(200).send(); })
+                .catch(err => {
+                    logger.error(err);
+                    res.status(404).send("Group not found or user not invited");
+                })
+        })
+        .catch(err => {
+            logger.error(err);
+            res.status(500).send();
+        })
 }
 
 const create = (req, res) => {
