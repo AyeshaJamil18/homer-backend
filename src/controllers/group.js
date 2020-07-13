@@ -18,7 +18,7 @@ const group = (req, res) => {
         return;
     }
 
-    groupModel.findOne({ title: req.params.title }, 'title members')
+    groupModel.findOne({ title: req.params.title }, 'title members invited')
         .then(group => res.status(200).json(group));
 };
 
@@ -56,10 +56,65 @@ const remove = (req, res) => {
         });
 }
 
+const invite = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title', 'user'], req, res)) {
+        return;
+    }
+    logger.debug("Inviting " + req.params.user + " to the group " + req.params.title);
+
+    userModel.findOne({ username: req.params.user })
+        .then(user => {
+            groupModel.findOneAndUpdate({ title: req.params.title }, { $addToSet: { invited: user.username}})
+                .then(() => { res.status(200).send(); });
+        })
+        .catch(err => {
+            logger.error(err);
+            res.status(500).send("Internal Error");
+        });
+}
+
+const join = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title'], req, res)) {
+        return;
+    }
+    logger.debug("User " + req.params.user + " joins the group " + req.params.title);
+
+    userModel.findById(req.userId)
+        .then(user => {
+            groupModel.findOneAndUpdate(
+                { $and: [{title: req.params.title}, {invited: user.username}]},
+                [{ $addToSet: { members: user.username } }, { $pull: { invited: user.username }}])
+                .then(() => { res.status(200).send(); })
+                .catch(err => {
+                    logger.error(err);
+                    res.status(404).send("Group not found or user not invited");
+                })
+        })
+        .catch(err => {
+            logger.error(err);
+            res.status(500).send();
+        })
+}
+
+const leave = (req, res) => {
+
+}
+
+const create = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title'], req, res)) {
+        return;
+    }
+    logger.debug("User creates the group " + req.params.title);
+}
+
 
 module.exports = {
     //getGroupById,
     group,
     add,
-    remove
+    remove,
+    invite,
+    join,
+    leave,
+    create
 };
