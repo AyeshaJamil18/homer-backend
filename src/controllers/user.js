@@ -25,6 +25,9 @@ const apiResolveIdToName = (req, res) => {
     userModel.findById(req.params['userId'])
         .then(user => user ?
             res.status(200).send({username: user.username}) : res.status(404).send("Not found"))
+        .catch(err => {
+            res.status(500).send();
+        })
 };
 
 const apiCheckUserEmail = (req, res) => {
@@ -53,37 +56,44 @@ const apiFindUserByUsername = (req, res) => {
 
 
 const apiAddFriend = (req, res) => {
-    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['username'], req, res)) {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
         return;
     }
 
-    let idOfFriend = "";
-    userModel.find({username: req.params['username']})
-        .then(user => idOfFriend = user[0]._id)
-
-    let usernameOfCurrentUser = "";
-    userModel.findById(req.userId, 'username', {lean: true})
-        .then(user => usernameOfCurrentUser = user[0].username);
-
-    // add new friend to friends of current user
-    userModel.update(
-        { _id: req.userId },
-        { $addToSet: { friends: req.params['friendUsername']}},
-        );
-
-    // add current user to friends of new friend
-    userModel.update(
-        { _id: idOfFriend },
-        { $addToSet: { friends: usernameOfCurrentUser}},
-    );
-
-    // check whether friend was added correctly and return status code accordingly
-    // TODO: check also the other way round (search in friends list of new friend for username of current user)
-    userModel.findById(req.userId, 'username friends', {lean: true})
-        .then(user => ((user && user.length > 0 && user[0].friends.includes(req.params['friendUserName'])))
-            ? res.status(200).send({username: user[0].username, friends: user[0].friends})
-            : res.status(404).send({username: user[0].username, friends: user[0].friends}))
+    userModel.findOne({username: req.body.username})                                                    // Search for the user to be added
+        .then(addedFriend => {
+            userModel.findByIdAndUpdate(req.userId, { $addToSet: { friends: addedFriend.username }})    // Find the own user entry and add the user as a friend
+                .then(currUser => {
+                    addedFriend.update({$addToSet: { friends: currUser.username }})                     // Add yourself as a friend to the other user
+                        .then(() => {
+                            res.status(200).send();
+                        });
+                });
+        })
+        .catch(err => {
+            res.status(404).send("User couldn't be found.");
+        });
 };
+
+const searchUser = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['match'], req, res)) {
+        return;
+    }
+
+    userModel.find({
+        $expr: {
+            $regexMatch: {
+                input: { $concat: [ "$firstName", " ", "$lastName" ] },
+                regex: req.params.match,
+                options: "i"
+            }
+        }
+    }).then(result => {
+        res.status(200).json(result);
+    }).catch(err => {
+        res.status(500).send("Internal Error");
+    });
+}
 
 
 module.exports = {
@@ -92,5 +102,6 @@ module.exports = {
     apiResolveIdToName,
     apiGetOwnData,
     apiCheckUserEmail,
-    apiAddFriend
+    apiAddFriend,
+    searchUser
 };
