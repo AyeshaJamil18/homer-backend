@@ -27,6 +27,47 @@ const SaveVideo = (req, res) => {
         });
 };
 
+const GetVideoOfDay = (req, res) => {
+
+    videoModel.count( {}, function(err, result){
+
+        if(err){
+            logger.debug("Total Elements in video are  " + err);
+            res.status(401).send(err);
+        }
+        else{
+            logger.debug("Total Elements in video are  " + result);
+            videoModel.find({}, {_id:1}).then(data => {
+
+                logger.debug("Data is " + data);
+                const randomVal = between(1,result);
+                logger.debug("Random id is " + randomVal);
+                const Videoid =data[randomVal]._id;
+                videoModel.find({_id: Videoid}).then(Viddata => {
+                     logger.debug("video " + Viddata);
+                     res.status(200).send({videoID:Viddata._id,videoTitle: Viddata.videoTitle, videoUrl: Viddata.videoUrl});
+                }).catch(
+                );
+            }).catch(error => {
+                logger.debug(error);}
+                res.status(401).send(error);
+            );
+           //
+        }
+
+    })
+
+
+
+};
+function between(min, max) {
+    return Math.floor(
+        Math.random() * (max - min) + min
+    )
+}
+
+
 module.exports = {
-    SaveVideo
+    SaveVideo,
+    GetVideoOfDay
 };
