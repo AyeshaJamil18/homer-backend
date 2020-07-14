@@ -6,20 +6,18 @@ const groupModel = require('../models/group');
 const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util");
 const logger = require('../logger')("controller/auth.js");
 
-/*
-const getGroupById = (groupId) => {
-    logger.debug("Group " + groupId + " was requested");
-
-    return groupModel.findById(groupId);
-}; */
-
 const group = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title'], req, res)) {
         return;
     }
 
-    groupModel.findOne({ title: req.params.title }, 'title members invited')
-        .then(group => res.status(200).json(group));
+    userModel.findById(req.userId).then(requester => {
+        groupModel.findOne({ $and: [ {title: req.params.title}, {$or: [ {members: requester.username}, {invited: requester.username}]}]}, 'title members invited')
+            .then(group => res.status(200).json(group));
+    }).catch(err => {
+        logger.error(err);
+        res.status(404).send("Group not found or requester is not a member of the group.")
+    })
 };
 
 const add = (req, res) => {
@@ -64,9 +62,9 @@ const invite = (req, res) => {
 
     userModel.findById(req.userId).then(invitator => {
         userModel.findOne({ username: req.params.user })
-            .then(invitationist => {
-                groupModel.findOneAndUpdate({ $and: [ {title: req.params.title}, { members: invitator.username}, { $not: {members: invitationist.username}}] },
-                    { $addToSet: { invited: invitationist.username}})
+            .then(invited => {
+                groupModel.findOneAndUpdate({ $and: [ {title: req.params.title}, { members: invitator.username}, { $not: {members: invited.username}}] },
+                    { $addToSet: { invited: invited.username}})
                     .then(() => { res.status(200).send(); })
                     .catch(err => {
                         logger.error(err);

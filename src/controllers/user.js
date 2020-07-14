@@ -3,6 +3,7 @@
 const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util");
 
 const userModel = require('../models/user');
+const groupModel = require('../models/group');
 
 const logger = require('../logger')("controller/auth.js");
 
@@ -90,14 +91,22 @@ const searchUser = (req, res) => {
         }
     }).then(result => {
         res.status(200).json(result);
-    }).catch(err => {
+    }).catch(() => {
         res.status(500).send("Internal Error");
     });
 }
 
 const groups = (req, res) => {
-    userModel.findById(req.userId, 'groups')
-        .then(result => res.status(200).json(result.groups));
+    userModel.findById(req.userId).then(requester => {
+        groupModel.find({members: requester.username}, 'title').then(memberGroups => {
+            groupModel.find({invited: requester.username}, 'title').then(invitedGroups => {
+                res.status(200).json({member: memberGroups, invited: invitedGroups});
+            })
+        })
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    })
 }
 
 
