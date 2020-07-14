@@ -43,14 +43,14 @@ const GetVideoOfDay = (req, res) => {
                 const randomVal = between(1,result);
                 logger.debug("Random id is " + randomVal);
                 const Videoid =data[randomVal]._id;
-                videoModel.find({_id: Videoid}).then(Viddata => {
-                     logger.debug("video " + Viddata);
-                     res.status(200).send({videoID:Viddata._id,videoTitle: Viddata.videoTitle, videoUrl: Viddata.videoUrl});
+                videoModel.find({_id: Videoid}).then(data => {
+                     logger.debug("video " + data);
+                     res.status(200).send(data);
                 }).catch(
                 );
             }).catch(error => {
-                logger.debug(error);}
-                res.status(401).send(error);
+                logger.debug(error);
+                res.status(401).send(error);}
             );
            //
         }
