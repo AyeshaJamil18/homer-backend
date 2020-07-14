@@ -94,10 +94,25 @@ const leave = (req, res) => {
 }
 
 const create = (req, res) => {
-    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title'], req, res)) {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['title', 'invited'], req, res)) {
         return;
     }
-    logger.debug("User creates the group " + req.params.title);
+    logger.debug("User creates the group " + req.body['title']);
+
+    userModel.findById(req.userId).then(user => {
+        groupModel.create({
+            title: req.body['title'],
+            members: [user.username],
+            invited: req.body['invited']
+        }).then(() => {
+            res.status(200).send();
+        }).catch(() => {
+            res.status(400).send();
+        })
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    })
 }
 
 

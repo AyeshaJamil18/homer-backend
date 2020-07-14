@@ -36,6 +36,6 @@ router.post('/:title/join/', middleware.checkAuthentication, groupController.joi
 
 router.post('/:title/leave/', middleware.checkAuthentication, groupController.leave)
 
-router.post('/create/:title', middleware.checkAuthentication, groupController.create);
+router.post('/create/', middleware.checkAuthentication, groupController.create);
 
 module.exports = router;
