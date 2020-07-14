@@ -20,40 +20,6 @@ const group = (req, res) => {
     })
 };
 
-const add = (req, res) => {
-    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title', 'user'], req, res)) {
-        return;
-    }
-    logger.debug("User " + req.params.user + " is added to the group " + req.params.title);
-
-    userModel.findOneAndUpdate({ username: req.params.user }, { $addToSet: { groups: req.params.title }})
-        .then(user => {
-            groupModel.findOneAndUpdate({ title: req.params.title }, { $addToSet: { members: user.username}})
-                .then(() => { res.status(200).send(); });
-        })
-        .catch(err => {
-            logger.error(err);
-            res.status(500).send("Internal Error");
-        });
-}
-
-const remove = (req, res) => {
-    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title', 'user'], req, res)) {
-        return;
-    }
-    logger.debug("User " + req.params.user + " is removed from the group " + req.params.title);
-
-    userModel.findOneAndUpdate({ username: req.params.user }, { $pull: { groups: req.params.title }})
-        .then(user => {
-            groupModel.findOneAndUpdate({ title: req.params.title }, { $pull: { members: user.username}})
-                .then(() => { res.status(200).send(); });
-        })
-        .catch(err => {
-            logger.error(err);
-            res.status(500).send("Internal Error");
-        });
-}
-
 const invite = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['title', 'user'], req, res)) {
         return;
@@ -136,10 +102,7 @@ const create = (req, res) => {
 
 
 module.exports = {
-    //getGroupById,
     group,
-    add,
-    remove,
     invite,
     join,
     leave,
