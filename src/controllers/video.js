@@ -72,11 +72,17 @@ function between(min, max) {
 const GetVideoByTag = (req, res) => {
 
     logger.debug("Requested document with id " + req.params['tag']);
+    videoModel.find({
+        $expr: {
+            $regexMatch: {
+                input: { $concat: [ "$keywords", " ", "$videoTitle" ] },
+                regex: req.params['tag'],
+                options: "i"
+            }
+        }
+    }).then(data => {
 
-
-    videoModel.find({keywords: req.params['tag']}).then(data => {
-
-        // logger.debug("video " + data.videoTitle);
+         logger.debug("video " + data.videoTitle);
         // res.status(200).send({videoTitle: data[0].videoTitle, videoUrl: data[].videoUrl});
         let extractedDouments = data.map(doc =>
         {
