@@ -27,6 +27,7 @@ const SaveVideo = (req, res) => {
         });
 };
 
+
 const GetVideoOfDay = (req, res) => {
 
     videoModel.count( {}, function(err, result){
@@ -67,7 +68,38 @@ function between(min, max) {
 }
 
 
+
+const GetVideoByTag = (req, res) => {
+
+    logger.debug("Requested document with id " + req.params['tag']);
+
+
+    videoModel.find({keywords: req.params['tag']}).then(data => {
+
+        // logger.debug("video " + data.videoTitle);
+        // res.status(200).send({videoTitle: data[0].videoTitle, videoUrl: data[].videoUrl});
+        let extractedDouments = data.map(doc =>
+        {
+            return {...extractParamsFromDocument(doc, ['videoTitle', 'videoUrl'])}
+    });
+        Promise.all(extractedDouments).then(finalDocs => res.status(200).json({docs: finalDocs.filter(doc => doc)}));
+    }).catch(error => {
+        logger.debug(error);}
+    );
+
+};
+
+const extractParamsFromDocument = (doc, variables) => {
+    let temp = {};
+    variables.forEach(variable => temp[variable] = doc[variable]);
+    return temp;
+};
+
+
+
+
 module.exports = {
     SaveVideo,
-    GetVideoOfDay
+    GetVideoOfDay,
+    GetVideoByTag
 };
