@@ -32,12 +32,12 @@ const invite = (req, res) => {
     userModel.findById(req.userId).then(invitator => {
         userModel.findOne({ username: req.params.user })
             .then(invited => {
-                groupModel.findOneAndUpdate({ $and: [ {title: req.params.title}, { members: invitator.username}, { $not: {members: invited.username}}] },
+                groupModel.findOneAndUpdate({ $and: [ {title: req.params.title}, { members: invitator.username}]},
                     { $addToSet: { invited: invited.username}})
                     .then(() => { res.status(200).send(); })
                     .catch(err => {
                         logger.error(err);
-                        res.status(404).send("Group not found or invitator not member of the group or invited user already in the group.");
+                        res.status(404).send("Group not found or invitator not member of the group.");
                     })
             })
             .catch(err => {
