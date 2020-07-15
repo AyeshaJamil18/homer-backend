@@ -50,8 +50,9 @@ const apiFindUserByUsername = (req, res) => {
 
     userModel.find({username: req.params['username']})
         .then(user => (user && user.length > 0) ?
-            user[0].username === req.params['username'] ? res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:true})
-                : res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:false})
+            user[0].username === req.params['username']
+                ? res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:true, firstName: user[0].firstName, lastName: user[0].lastName})
+                : res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:false, firstName: user[0].firstName, lastName: user[0].lastName})
             : res.status(404).send({username: null, userId: null, isExist: false}))
 };
 

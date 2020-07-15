@@ -12,8 +12,11 @@ const group = (req, res) => {
     }
 
     userModel.findById(req.userId).then(requester => {
-        groupModel.findOne({ $and: [ {title: req.params.title}, {$or: [ {members: requester.username}, {invited: requester.username}]}]}, 'title members invited')
-            .then(group => res.status(200).json(group));
+        groupModel.aggregate([
+            { $match: { $and: [ {title: req.params.title}, {$or: [ {members: requester.username}, {invited: requester.username}]}]}},
+            { $lookup: { from: 'users', localField: 'members', foreignField: 'username', as: 'members' }},
+            { $lookup: { from: 'users', localField: 'invited', foreignField: 'username', as: 'invited' }}
+        ]).then(group => res.status(200).json(group[0]));
     }).catch(err => {
         logger.error(err);
         res.status(404).send("Group not found or requester is not a member of the group.")
