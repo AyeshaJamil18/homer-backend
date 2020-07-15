@@ -13,6 +13,10 @@ const GroupSchema = new mongoose.Schema({
         // usernames of the users that are members of the group
         type: [String]
     },
+    invited: {
+        // usernames of users, that are invited to the group, but haven't joined yet
+        type: [String]
+    },
     groupLeaderboard: {
         // name of the groupLeaderboard of the group
         type: String

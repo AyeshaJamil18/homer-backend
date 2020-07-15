@@ -3,6 +3,7 @@
 const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util");
 
 const userModel = require('../models/user');
+const groupModel = require('../models/group');
 
 const logger = require('../logger')("controller/auth.js");
 
@@ -49,8 +50,9 @@ const apiFindUserByUsername = (req, res) => {
 
     userModel.find({username: req.params['username']})
         .then(user => (user && user.length > 0) ?
-            user[0].username === req.params['username'] ? res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:true})
-                : res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:false})
+            user[0].username === req.params['username']
+                ? res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:true, firstName: user[0].firstName, lastName: user[0].lastName})
+                : res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:false, firstName: user[0].firstName, lastName: user[0].lastName})
             : res.status(404).send({username: null, userId: null, isExist: false}))
 };
 
@@ -90,9 +92,22 @@ const searchUser = (req, res) => {
         }
     }).then(result => {
         res.status(200).json(result);
-    }).catch(err => {
+    }).catch(() => {
         res.status(500).send("Internal Error");
     });
+}
+
+const groups = (req, res) => {
+    userModel.findById(req.userId).then(requester => {
+        groupModel.find({members: requester.username}, 'title').then(memberGroups => {
+            groupModel.find({invited: requester.username}, 'title').then(invitedGroups => {
+                res.status(200).json({member: memberGroups, invited: invitedGroups});
+            })
+        })
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    })
 }
 
 
@@ -103,5 +118,6 @@ module.exports = {
     apiGetOwnData,
     apiCheckUserEmail,
     apiAddFriend,
-    searchUser
+    searchUser,
+    groups
 };

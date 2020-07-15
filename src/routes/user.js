@@ -89,4 +89,6 @@ router.get('/search/:match', middleware.checkAuthentication, userController.sear
  */
 router.post('/addFriend', middleware.checkAuthentication, userController.apiAddFriend);
 
+router.get('/groups', middleware.checkAuthentication, userController.groups);
+
 module.exports = router;

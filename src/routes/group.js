@@ -28,6 +28,14 @@ const groupController = require('../controllers/group');
  *       200:
  *         description: Found group data
  */
-router.get('/', middleware.checkAuthentication, groupController.apiGetOwnData);
+router.get('/:title', middleware.checkAuthentication, groupController.group);
+
+router.post('/:title/invite/:user', middleware.checkAuthentication, groupController.invite);
+
+router.post('/:title/join/', middleware.checkAuthentication, groupController.join);
+
+router.post('/:title/leave/', middleware.checkAuthentication, groupController.leave)
+
+router.post('/create/', middleware.checkAuthentication, groupController.create);
 
 module.exports = router;
