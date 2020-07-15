@@ -55,13 +55,38 @@ router.get('/', middleware.checkAuthentication, userController.apiGetOwnData);
  *       404:
  *         description: No document for this id found
  */
-router.get('/:userId', middleware.checkAuthentication, userController.apiResolveIdToName);
+//router.get('/:userId', middleware.checkAuthentication, userController.apiResolveIdToName);
 
 // TODO: rename endpoint to "findUserByUsername" and update frontend accordingly
 router.get('/getUserByUsername/:username', middleware.checkAuthentication, userController.apiFindUserByUsername);
 
 router.get('/checkEmail/:userEmail', middleware.checkAuthentication, userController.apiCheckUserEmail);
 
-router.put('/addFriend/:friendUsername', middleware.checkAuthentication, userController.apiAddFriend)
+router.get('/search/:match', middleware.checkAuthentication, userController.searchUser);
+
+/**
+ * @swagger
+ *
+ * /user/addFriend:
+ *   POST:
+ *     description: Adds another user to your friend list and adds yourself to the friend list of this user
+ *     tags: [User]
+ *     security:
+ *     - BearerAuth: []
+ *     parameters:
+ *       - in: body
+ *         name: username
+ *         description: The username of the friend you want to add
+ *         required: true
+ *         schema:
+ *           type: string
+ *           example: user123
+ *     responses:
+ *       200:
+ *         description: Successfull
+ *       404:
+ *         description: The specified user wasn't found
+ */
+router.post('/addFriend', middleware.checkAuthentication, userController.apiAddFriend);
 
 module.exports = router;
