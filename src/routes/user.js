@@ -87,7 +87,9 @@ router.get('/search/:match', middleware.checkAuthentication, userController.sear
  *       404:
  *         description: The specified user wasn't found
  */
-router.post('/addFriend', middleware.checkAuthentication, userController.apiAddFriend);
+router.post('/addFriend', middleware.checkAuthentication, userController.addFriend);
+
+router.post('/removeFriend', middleware.checkAuthentication, userController.removeFriend);
 
 router.get('/groups', middleware.checkAuthentication, userController.groups);
 
