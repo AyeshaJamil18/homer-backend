@@ -28,6 +28,7 @@ const apiResolveIdToName = (req, res) => {
         .then(user => user ?
             res.status(200).send({username: user.username}) : res.status(404).send("Not found"))
         .catch(err => {
+            log.error(err)
             res.status(500).send();
         })
 };
@@ -74,6 +75,7 @@ const apiAddFriend = (req, res) => {
                 });
         })
         .catch(err => {
+            log.error(err)
             res.status(404).send("User couldn't be found.");
         });
 };
