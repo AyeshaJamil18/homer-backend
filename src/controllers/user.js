@@ -110,6 +110,15 @@ const groups = (req, res) => {
     })
 }
 
+const friends = (req, res) => {
+    userModel.findById(req.userId, 'username friends').then(friends => {
+        res.status(200).json(friends);
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    })
+}
+
 
 module.exports = {
     getUserById,
@@ -119,5 +128,6 @@ module.exports = {
     apiCheckUserEmail,
     apiAddFriend,
     searchUser,
-    groups
+    groups,
+    friends
 };

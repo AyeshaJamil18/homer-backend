@@ -91,4 +91,6 @@ router.post('/addFriend', middleware.checkAuthentication, userController.apiAddF
 
 router.get('/groups', middleware.checkAuthentication, userController.groups);
 
+router.get('/friends', middleware.checkAuthentication, userController.friends);
+
 module.exports = router;
