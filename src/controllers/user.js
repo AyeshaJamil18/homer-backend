@@ -4,6 +4,7 @@ const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util
 
 const userModel = require('../models/user');
 const groupModel = require('../models/group');
+const recordModel = require('../models/record');
 
 const logger = require('../logger')("controller/auth.js");
 
@@ -77,6 +78,33 @@ const apiAddFriend = (req, res) => {
         });
 };
 
+
+const apiAddXp = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['xp'], req, res)) {
+        return;
+    }
+
+    userModel.findById(req.userId).then(currentUser => {
+        recordModel.createRecordForUserIfNotExistent(currentUser.username).catch(err => {
+            logger.error(err);
+            res.status(500).send("Record for user could not be created.");
+        });
+        recordModel.findOneAndUpdate({recordUsername: currentUser.username},
+            {$inc: {totalPoints: req.params['xp']}})
+            .then((rec) => {
+                logger.info ("Successfully added "+ req.params['xp'] + "XP. New total xp: " + rec.totalPoints)
+                res.status(200).send();
+            })
+            .catch(err => {
+                logger.error(err);
+                res.status(500).send("XP could not be added.");
+            })
+    }).catch(err => {
+        logger.error(err);
+        res.status(404).send("User not found.")
+    })
+}
+
 const searchUser = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['match'], req, res)) {
         return;
@@ -119,5 +147,6 @@ module.exports = {
     apiCheckUserEmail,
     apiAddFriend,
     searchUser,
-    groups
+    groups,
+    apiAddXp
 };
