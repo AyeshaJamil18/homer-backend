@@ -10,7 +10,7 @@ const LeaderboardSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    records: {
+    entries: {
         // recordUsernames
         type: [String]
     },

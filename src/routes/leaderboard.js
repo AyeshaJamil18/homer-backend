@@ -30,4 +30,6 @@ const leaderboardController = require('../controllers/leaderboard');
  */
 router.get('/', middleware.checkAuthentication, leaderboardController.apiGetOwnData);
 
+router.get('/generateRanking/:leaderboard', middleware.checkAuthentication, leaderboardController.apiGenerateRanking);
+
 module.exports = router;
