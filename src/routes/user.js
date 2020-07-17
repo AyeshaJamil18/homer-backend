@@ -91,6 +91,6 @@ router.post('/addFriend', middleware.checkAuthentication, userController.apiAddF
 
 router.get('/groups', middleware.checkAuthentication, userController.groups);
 
-router.put('/addXp', middleware.checkAuthentication, userController.apiAddXp);
+router.put('/addXp/:xp', middleware.checkAuthentication, userController.apiAddXp);
 
 module.exports = router;

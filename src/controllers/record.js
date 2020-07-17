@@ -1,5 +1,7 @@
 "use strict";
 
+const {createLeaderboardIfNotExistent} = require("./leaderboard");
+
 const recordModel = require('../models/record');
 const leaderboardModel = require('../models/leaderboard');
 
@@ -28,7 +30,7 @@ const createRecordForUserIfNotExistent = (username, res) => {
             }).then(() => {
                 logger.info("record for user created")
                 // TODO loop through all leaderboards of the groups the user is member of
-                leaderboardModel.createLeaderboardIfNotExistent("global");
+                createLeaderboardIfNotExistent("global", res);
                 leaderboardModel.findOneAndUpdate({identifier: "global"}, {records: username})
                     .then(() => {
                         logger.info("record for user added to global leaderboard")

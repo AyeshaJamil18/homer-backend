@@ -1,6 +1,7 @@
 "use strict";
 
 const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util");
+const {createRecordForUserIfNotExistent} = require("./record");
 
 const userModel = require('../models/user');
 const groupModel = require('../models/group');
@@ -87,14 +88,11 @@ const apiAddXp = (req, res) => {
     }
 
     userModel.findById(req.userId).then(currentUser => {
-        recordModel.createRecordForUserIfNotExistent(currentUser.username).catch(err => {
-            logger.error(err);
-            res.status(500).send("Record for user could not be created.");
-        });
+        createRecordForUserIfNotExistent(currentUser.username, res);
         recordModel.findOneAndUpdate({recordUsername: currentUser.username},
             {$inc: {totalPoints: req.params['xp']}})
-            .then((rec) => {
-                logger.info ("Successfully added "+ req.params['xp'] + "XP. New total xp: " + rec.totalPoints)
+            .then(() => {
+                logger.info ("Successfully added "+ req.params['xp'] + "XP.")
                 res.status(200).send();
             })
             .catch(err => {
@@ -103,7 +101,7 @@ const apiAddXp = (req, res) => {
             })
     }).catch(err => {
         logger.error(err);
-        res.status(404).send("User not found.")
+        res.status(500).send("Something went wrong.")
     })
 }
 
