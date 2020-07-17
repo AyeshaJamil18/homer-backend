@@ -111,8 +111,11 @@ const groups = (req, res) => {
 }
 
 const friends = (req, res) => {
-    userModel.findById(req.userId, 'username friends').then(friends => {
-        res.status(200).json(friends);
+    userModel.findById(req.userId).then(user => {
+        userModel.aggregate([
+            { $match: { username: user.username } },
+            { $lookup: { from: 'users', localField: 'friends', foreignField: 'username', as: 'friends' }}
+        ]).then(friends => res.status(200).send(friends[0].friends))
     }).catch(err => {
         logger.error(err);
         res.status(500).send();
