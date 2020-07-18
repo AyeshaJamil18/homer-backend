@@ -131,19 +131,28 @@ const searchUser = (req, res) => {
         return;
     }
 
-    userModel.find({
-        $expr: {
-            $regexMatch: {
-                input: { $concat: [ "$firstName", " ", "$lastName" ] },
-                regex: req.params.match,
-                options: "i"
+    userModel.findById(req.userId).then(user => {
+        userModel.find({
+            $expr: {
+                $regexMatch: {
+                    input: {$concat: ["$firstName", " ", "$lastName"]},
+                    regex: req.params.match,
+                    options: "i"
+                }
             }
-        }
-    }).then(result => {
-        res.status(200).json(result);
-    }).catch(() => {
-        res.status(500).send("Internal Error");
+        }).then(result => {
+            logger.info("result of user search: " + result)
+            result = result.filter(entry => !user.friends.includes(entry.username))
+            logger.info("result of user search after filtering out friends: " + result)
+            res.status(200).json(result);
+        }).catch(() => {
+            res.status(500).send("Internal Error");
+        });
+    }).catch(err => {
+        logger.error(err);
+        res.status(400).send();
     });
+
 };
 
 const groups = (req, res) => {
