@@ -121,6 +121,7 @@ const removeFriend = (req, res) => {
                 });
         })
         .catch(err => {
+            logger.error(err)
             res.status(404).send("User couldn't be found.");
         });
 
