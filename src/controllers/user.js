@@ -144,6 +144,8 @@ const searchUser = (req, res) => {
             logger.info("result of user search: " + result)
             result = result.filter(entry => !user.friends.includes(entry.username))
             logger.info("result of user search after filtering out friends: " + result)
+            result = result.slice(0,10)
+            logger.info("result of user search after limiting search result to 10: " + result)
             res.status(200).json(result);
         }).catch(() => {
             res.status(500).send("Internal Error");
