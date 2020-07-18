@@ -106,6 +106,14 @@ const apiAddXp = (req, res) => {
         return;
     }
 
+    if (!(parseFloat(req.params['xp']) > 0)) {
+        res.status(400).json({
+            error: 'Bad Request',
+            message: 'XP to be added should be a at least 1!'
+        });
+        return;
+    }
+
     userModel.findById(req.userId).then(currentUser => {
         createRecordForUserIfNotExistent(currentUser.username, res);
         recordModel.findOneAndUpdate({recordUsername: currentUser.username},
