@@ -37,21 +37,22 @@ const apiGenerateRanking = (req, res) => {
         return;
     }
 
-    leaderboardModel.findOne({identifier: req.params['leaderboard']})
-        .then(leaderboard => {
-            logger.info("Found leaderboard: " + leaderboard.identifier + ": " + leaderboard + "\n"
-                + ". Number of entries: " + leaderboard.entries.length + ". Entries: " + leaderboard.entries)
-            const result = leaderboard.entries.map( function(entry) {
-                // TODO retrieve points from recordModel and use real data
-                let points = Math.floor(Math.random() * 100);
-                let elem = { "username": entry, "points": points };
-                return elem;
-            });
-            result.sort((a, b) => parseFloat(b.points) - parseFloat(a.points));
-            res.status(200).send(result);
-        }).catch(err => {
-            logger.error(err);
-            res.status(500).send(err);
+    recordModel.find({totalPoints: {$gt: 0}})
+        .then(allRecords => {
+            leaderboardModel.findOne({identifier: req.params['leaderboard']})
+                .then(leaderboard => {
+                    logger.info("Found leaderboard: " + leaderboard.identifier + ": " + leaderboard + "\n"
+                        + ". Number of entries: " + leaderboard.entries.length + ". Entries: " + leaderboard.entries)
+                    const result = leaderboard.entries.map(function (entry) {
+                        let points = allRecords.find(elem => elem.recordUsername === entry).totalPoints;
+                        return {"username": entry, "points": points};
+                    });
+                    result.sort((a, b) => parseFloat(b.points) - parseFloat(a.points));
+                    res.status(200).send(result);
+                }).catch(err => {
+                logger.error(err);
+                res.status(500).send(err);
+            })
         })
 
 };
