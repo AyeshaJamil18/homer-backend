@@ -60,7 +60,7 @@ const apiFindUserByUsername = (req, res) => {
 };
 
 
-const apiAddFriend = (req, res) => {
+const addFriend = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
         return;
     }
@@ -80,6 +80,7 @@ const apiAddFriend = (req, res) => {
             res.status(404).send("User couldn't be found.");
         });
 };
+
 
 
 const apiAddXp = (req, res) => {
@@ -103,6 +104,26 @@ const apiAddXp = (req, res) => {
         logger.error(err);
         res.status(500).send("Something went wrong.")
     })
+
+const removeFriend = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
+        return;
+    }
+
+    userModel.findOne({username: req.body.username})                                                    // Search for the user to be removed
+        .then(removedFriend => {
+            userModel.findByIdAndUpdate(req.userId, { $pull: { friends: removedFriend.username }})    // Find the own user entry and remove the user as a friend
+                .then(currUser => {
+                    removedFriend.update({$pull: { friends: currUser.username }})                     // Remove yourself as a friend to the other user
+                        .then(() => {
+                            res.status(200).send();
+                        });
+                });
+        })
+        .catch(err => {
+            res.status(404).send("User couldn't be found.");
+        });
+
 }
 
 const searchUser = (req, res) => {
@@ -138,6 +159,18 @@ const groups = (req, res) => {
     })
 }
 
+const friends = (req, res) => {
+    userModel.findById(req.userId).then(user => {
+        userModel.aggregate([
+            { $match: { username: user.username } },
+            { $lookup: { from: 'users', localField: 'friends', foreignField: 'username', as: 'friends' }}
+        ]).then(friends => res.status(200).send(friends[0].friends))
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    })
+}
+
 
 module.exports = {
     getUserById,
@@ -145,8 +178,10 @@ module.exports = {
     apiResolveIdToName,
     apiGetOwnData,
     apiCheckUserEmail,
-    apiAddFriend,
+    addFriend,
+    removeFriend,
     searchUser,
     groups,
-    apiAddXp
+    apiAddXp,
+    friends
 };
