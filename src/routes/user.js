@@ -98,5 +98,6 @@ router.post('/addXp/:xp', middleware.checkAuthentication, userController.apiAddX
 
 router.get('/friends', middleware.checkAuthentication, userController.friends);
 
+router.post('/CreatePlaylist/:PlaylistName', middleware.checkAuthentication, userController.apiAddPlaylist);
 
 module.exports = router;
