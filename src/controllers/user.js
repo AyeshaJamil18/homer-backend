@@ -82,16 +82,22 @@ const searchUser = (req, res) => {
         return;
     }
 
+    const nomemberof = req.query.nomemberof;
+    const nofriendof = req.query.nofriendof;
+
     userModel.find({
         $expr: {
-            $regexMatch: {
-                input: { $concat: [ "$firstName", " ", "$lastName" ] },
-                regex: req.params.match,
-                options: "i"
-            }
+            $or: [
+                { $regexMatch: {
+                    input: { $concat: [ "$firstName", " ", "$lastName" ] },
+                    regex: req.params.match,
+                    options: "i"
+                }}
+                //{ username: /req.params.match/i }
+            ]
         }
     }).then(result => {
-        res.status(200).json(result);
+            res.status(200).json(result);
     }).catch(() => {
         res.status(500).send("Internal Error");
     });
