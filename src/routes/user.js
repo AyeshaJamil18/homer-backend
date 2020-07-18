@@ -94,7 +94,7 @@ router.post('/removeFriend', middleware.checkAuthentication, userController.remo
 router.get('/groups', middleware.checkAuthentication, userController.groups);
 
 
-router.put('/addXp/:xp', middleware.checkAuthentication, userController.apiAddXp);
+router.post('/addXp/:xp', middleware.checkAuthentication, userController.apiAddXp);
 
 router.get('/friends', middleware.checkAuthentication, userController.friends);
 
