@@ -49,12 +49,13 @@ const extractParamsFromDocument = (doc, variables) => {
 
 
 const AddVideoToPlaylist = (req, res) => {
+
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['PlaylistName','VideoId'], req, res)) {
         return;
     }
-    userModel.findOne({title:req.body.PlaylistName}).then(currentPlaylist => {
-        playlistModel.findOneAndUpdate({title: req.body['PlaylistName']},
-            {$addToSet: {videos: req.body['VideoId']}})
+    playlistModel.findById(req.body.PlaylistName).then(currentPlaylist => {
+
+        playlistModel.findByIdAndUpdate(req.body.PlaylistName, {$addToSet: {videos: req.body.VideoId}})
             .then(() => {
                 logger.info ("Successfully added video "+ req.body['Video_id'] + "to playlist "+req.body['PlaylistName']);
                 res.status(200).send();
