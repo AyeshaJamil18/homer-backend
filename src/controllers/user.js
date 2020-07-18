@@ -6,6 +6,7 @@ const {createRecordForUserIfNotExistent} = require("./record");
 const userModel = require('../models/user');
 const groupModel = require('../models/group');
 const recordModel = require('../models/record');
+const playlistModel = require('../models/playlist');
 
 const logger = require('../logger')("controller/auth.js");
 
@@ -124,6 +125,28 @@ const apiAddXp = (req, res) => {
     })
 };
 
+const apiAddPlaylist= (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['PlaylistName'], req, res)) {
+        return;
+    }
+    const Video = Object.assign(req.body);
+    userModel.findById(req.userId).then(currentUser => {
+    playlistModel.create({
+            creator: currentUser['username'],
+            title: req.params['PlaylistName']
+        }).then(() => {
+                logger.debug("Successfully added Playlist with name"+ req.params['PlaylistName'] );
+                res.status(200).send();
+            })
+            .catch(err => {
+                logger.error(err);
+                res.status(500).send("Playlist could not be created. Title already exist");
+            })
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send("User Not Found")
+    })};
+
 const removeFriend = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
         return;
@@ -227,5 +250,6 @@ module.exports = {
     searchUser,
     groups,
     apiAddXp,
-    friends
+    friends,
+    apiAddPlaylist
 };
