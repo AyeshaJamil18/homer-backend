@@ -1,9 +1,11 @@
 "use strict";
 
 const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util");
+const {createRecordForUserIfNotExistent} = require("./record");
 
 const userModel = require('../models/user');
 const groupModel = require('../models/group');
+const recordModel = require('../models/record');
 
 const logger = require('../logger')("controller/auth.js");
 
@@ -27,6 +29,7 @@ const apiResolveIdToName = (req, res) => {
         .then(user => user ?
             res.status(200).send({username: user.username}) : res.status(404).send("Not found"))
         .catch(err => {
+            log.error(err)
             res.status(500).send();
         })
 };
@@ -73,9 +76,34 @@ const addFriend = (req, res) => {
                 });
         })
         .catch(err => {
+            log.error(err)
             res.status(404).send("User couldn't be found.");
         });
 };
+
+
+
+const apiAddXp = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['xp'], req, res)) {
+        return;
+    }
+
+    userModel.findById(req.userId).then(currentUser => {
+        createRecordForUserIfNotExistent(currentUser.username, res);
+        recordModel.findOneAndUpdate({recordUsername: currentUser.username},
+            {$inc: {totalPoints: req.params['xp']}})
+            .then(() => {
+                logger.info ("Successfully added "+ req.params['xp'] + "XP.")
+                res.status(200).send();
+            })
+            .catch(err => {
+                logger.error(err);
+                res.status(500).send("XP could not be added.");
+            })
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send("Something went wrong.")
+    })
 
 const removeFriend = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
@@ -95,6 +123,7 @@ const removeFriend = (req, res) => {
         .catch(err => {
             res.status(404).send("User couldn't be found.");
         });
+
 }
 
 const searchUser = (req, res) => {
@@ -153,5 +182,6 @@ module.exports = {
     removeFriend,
     searchUser,
     groups,
+    apiAddXp,
     friends
 };
