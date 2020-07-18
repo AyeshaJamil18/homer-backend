@@ -86,7 +86,7 @@ const GetVideoByTag = (req, res) => {
         // res.status(200).send({videoTitle: data[0].videoTitle, videoUrl: data[].videoUrl});
         let extractedDouments = data.map(doc =>
         {
-            return {...extractParamsFromDocument(doc, ['videoTitle', 'videoUrl'])}
+            return {...extractParamsFromDocument(doc, ['videoTitle', 'videoUrl', '_id'])}
     });
         Promise.all(extractedDouments).then(finalDocs => res.status(200).json({docs: finalDocs.filter(doc => doc)}));
     }).catch(error => {

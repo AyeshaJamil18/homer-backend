@@ -88,5 +88,8 @@ router.get('/search/:match', middleware.checkAuthentication, userController.sear
  *         description: The specified user wasn't found
  */
 router.post('/addFriend', middleware.checkAuthentication, userController.apiAddFriend);
+router.post('/createPlaylist', middleware.checkAuthentication, userController.apiCreatePlaylist);
+
+
 
 module.exports = router;

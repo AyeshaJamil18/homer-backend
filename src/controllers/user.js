@@ -3,6 +3,7 @@
 const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util");
 
 const userModel = require('../models/user');
+const videoModel = require('../models/video');
 
 const logger = require('../logger')("controller/auth.js");
 
@@ -73,7 +74,28 @@ const apiAddFriend = (req, res) => {
         .catch(err => {
             res.status(404).send("User couldn't be found.");
         });
+}
+
+
+const apiCreatePlaylist = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
+        return;
+    }
+    videoModel.findOne({_id: req.body.id})                                                    // Search for the user to be added
+        .then(addedVideo => {
+            userModel.findByIdAndUpdate(req.userId, { $addToSet: { friends: addedFriend.username }})    // Find the own user entry and add the user as a friend
+                .then(currUser => {
+                    addedFriend.update({$addToSet: { friends: currUser.username }})                     // Add yourself as a friend to the other user
+                        .then(() => {
+                            res.status(200).send();
+                        });
+                });
+        })
+        .catch(err => {
+            res.status(404).send("User couldn't be found.");
+        });
 };
+
 
 const searchUser = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['match'], req, res)) {
@@ -103,5 +125,6 @@ module.exports = {
     apiGetOwnData,
     apiCheckUserEmail,
     apiAddFriend,
-    searchUser
+    searchUser,
+    apiCreatePlaylist
 };
