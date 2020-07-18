@@ -1,6 +1,8 @@
 "use strict";
 
 const {createLeaderboardIfNotExistent} = require("./leaderboard");
+const {addUserToLeaderboard} = require("./leaderboard");
+const {removeUserFromLeaderboard} = require("./leaderboard");
 
 
 const userModel = require('../models/user');
@@ -67,6 +69,7 @@ const join = (req, res) => {
                 {$and: [{title: req.params.title}, {invited: user.username}]},
                 {$addToSet: {members: user.username}, $pull: {invited: user.username}})
                 .then(() => {
+                    addUserToLeaderboard(req.params.title, user.username, res);
                     res.status(200).send();
                 })
                 .catch(err => {
@@ -92,6 +95,7 @@ const leave = (req, res) => {
                 {$and: [{title: req.params.title}, {members: user.username}]},
                 {$pull: {members: user.username}})
                 .then(() => {
+                    removeUserFromLeaderboard(req.params.title, user.username, res);
                     res.status(200).send();
                 })
                 .catch(err => {
@@ -118,7 +122,7 @@ const create = (req, res) => {
             members: [user.username],
             invited: req.body['invited']
         }).then(() => {
-            createLeaderboardIfNotExistent(req.body['title']);
+            createLeaderboardIfNotExistent(req.body['title'], res);
             res.status(200).send();
         }).catch(() => {
             res.status(400).send();

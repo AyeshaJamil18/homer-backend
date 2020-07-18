@@ -14,7 +14,7 @@ const apiGetOwnData = (req, res) => {
 };
 
 const createLeaderboardIfNotExistent = (leaderboardIdentifier, res) => {
-    leaderboardModel.exists({identifier : leaderboardIdentifier}).then(exists => {
+    leaderboardModel.exists({identifier: leaderboardIdentifier}).then(exists => {
         if (exists) {
             logger.info("leaderboard for " + leaderboardIdentifier + " already existed")
             res.status(200).send();
@@ -23,12 +23,37 @@ const createLeaderboardIfNotExistent = (leaderboardIdentifier, res) => {
                 identifier: leaderboardIdentifier,
                 entries: []
             }).then(() => {
+                logger.info("leaderboard for " + leaderboardIdentifier + " created.");
                 res.status(200).send();
             }).catch(err => {
                 logger.error(err);
                 res.status(500).send();
             });
         }
+    });
+};
+
+const addUserToLeaderboard = (leaderboardIdentifier, user, res) => {
+    createLeaderboardIfNotExistent(leaderboardIdentifier, res);
+    leaderboardModel.findOneAndUpdate({identifier: leaderboardIdentifier},
+        {$addToSet: {entries: user}})
+        .then(() => {
+            logger.info("added user " + user + " to leaderboard " + leaderboardIdentifier + ".");
+            res.status(200).send();
+        }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    });
+};
+
+const removeUserFromLeaderboard = (leaderboardIdentifier, user, res) => {
+    leaderboardModel.findOneAndUpdate({identifier: leaderboardIdentifier},
+        {$pull: {entries: user}})
+        .then(() => {
+            res.status(200).send();
+        }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
     });
 };
 
@@ -60,5 +85,7 @@ const apiGenerateRanking = (req, res) => {
 module.exports = {
     apiGetOwnData,
     createLeaderboardIfNotExistent,
-    apiGenerateRanking
+    apiGenerateRanking,
+    addUserToLeaderboard,
+    removeUserFromLeaderboard
 };
