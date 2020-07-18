@@ -103,7 +103,7 @@ const apiAddXp = (req, res) => {
     }).catch(err => {
         logger.error(err);
         res.status(500).send("Something went wrong.")
-    })
+    })};
 
 const removeFriend = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
@@ -124,7 +124,7 @@ const removeFriend = (req, res) => {
             res.status(404).send("User couldn't be found.");
         });
 
-}
+};
 
 const searchUser = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['match'], req, res)) {
@@ -144,7 +144,7 @@ const searchUser = (req, res) => {
     }).catch(() => {
         res.status(500).send("Internal Error");
     });
-}
+};
 
 const groups = (req, res) => {
     userModel.findById(req.userId).then(requester => {
@@ -157,7 +157,7 @@ const groups = (req, res) => {
         logger.error(err);
         res.status(500).send();
     })
-}
+};
 
 const friends = (req, res) => {
     userModel.findById(req.userId).then(user => {
@@ -169,7 +169,7 @@ const friends = (req, res) => {
         logger.error(err);
         res.status(500).send();
     })
-}
+};
 
 
 module.exports = {
