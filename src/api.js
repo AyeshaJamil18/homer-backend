@@ -9,7 +9,7 @@ const logger = require('./logger')("rest_collecter");
 
 
 const auth = require('./routes/auth');
-const AdminAuth = require('./routes/AdminAuth');
+const adminAuth = require('./routes/adminAuth');
 const user = require('./routes/user');
 const health = require('./routes/health');
 const admin = require('./routes/admin');
@@ -47,7 +47,7 @@ api.use(logger.logRestCall);
 
 // API routes
 api.use('/auth', auth);
-api.use('/AdminAuth', AdminAuth);
+api.use('/adminAuth', adminAuth);
 api.use('/user', user);
 api.use('/health', health);
 api.use('/admin', admin);
