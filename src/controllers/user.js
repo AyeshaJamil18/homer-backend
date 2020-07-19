@@ -181,6 +181,7 @@ const searchUser = (req, res) => {
                 }
                 if (!(nomemberof == null || group == null)) {
                     result = result.filter(entry => !group.members.includes(entry.username))
+                    result = result.filter(entry => !group.invited.includes(entry.username))
                     logger.info("result of user search after filtering out members of : " + nomemberof + ":" + result)
                 }
                 result = result.slice(0, 10)
