@@ -30,11 +30,11 @@ const groupController = require('../controllers/group');
  */
 router.get('/:title', middleware.checkAuthentication, groupController.group);
 
-router.post('/:title/invite/:user', middleware.checkAuthentication, groupController.invite);
+router.put('/:title/invite/:user', middleware.checkAuthentication, groupController.invite);
 
-router.post('/:title/join/', middleware.checkAuthentication, groupController.join);
+router.put('/:title/join/', middleware.checkAuthentication, groupController.join);
 
-router.post('/:title/leave/', middleware.checkAuthentication, groupController.leave)
+router.delete('/:title/leave/', middleware.checkAuthentication, groupController.leave)
 
 router.post('/create/', middleware.checkAuthentication, groupController.create);
 

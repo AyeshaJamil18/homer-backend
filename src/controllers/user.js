@@ -158,11 +158,11 @@ const apiAddPlaylist = (req, res) => {
 
 
 const removeFriend = (req, res) => {
-    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['username'], req, res)) {
         return;
     }
 
-    userModel.findOne({username: req.body.username})                                                    // Search for the user to be removed
+    userModel.findOne({username: req.params.username})                                                    // Search for the user to be removed
         .then(removedFriend => {
             userModel.findByIdAndUpdate(req.userId, {$pull: {friends: removedFriend.username}})    // Find the own user entry and remove the user as a friend
                 .then(currUser => {

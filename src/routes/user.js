@@ -88,12 +88,12 @@ router.get('/search/:match', middleware.checkAuthentication, userController.sear
  */
 router.post('/addFriend', middleware.checkAuthentication, userController.addFriend);
 
-router.post('/removeFriend', middleware.checkAuthentication, userController.removeFriend);
+router.delete('/removeFriend/:username', middleware.checkAuthentication, userController.removeFriend);
 
 router.get('/groups', middleware.checkAuthentication, userController.groups);
 
 
-router.post('/addXp/:xp', middleware.checkAuthentication, userController.apiAddXp);
+router.put('/addXp/:xp', middleware.checkAuthentication, userController.apiAddXp);
 
 router.get('/friends', middleware.checkAuthentication, userController.friends);
 
