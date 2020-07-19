@@ -69,8 +69,13 @@ const apiGenerateRanking = (req, res) => {
                     logger.info("Found leaderboard: " + leaderboard.identifier + ": " + leaderboard + "\n"
                         + ". Number of entries: " + leaderboard.entries.length + ". Entries: " + leaderboard.entries)
                     const result = leaderboard.entries.map(function (entry) {
-                        let points = allRecords.find(elem => elem.recordUsername === entry).totalPoints;
-                        return {"username": entry, "points": points};
+                        let points = 0;
+                        try {
+                            points = allRecords.find(elem => elem.recordUsername === entry).totalPoints;
+                        } finally {
+                            // we can ignore the exception here
+                            return {"username": entry, "points": points};
+                        }
                     });
                     result.sort((a, b) => parseFloat(b.points) - parseFloat(a.points));
                     res.status(200).send(result);
