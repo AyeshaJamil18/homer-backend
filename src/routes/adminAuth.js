@@ -4,13 +4,13 @@ const express = require('express');
 const router = express.Router();
 
 const middleware = require('../middleware');
-const AdminAuthController = require('../controllers/AdminAuth');
+const adminAuthController = require('../controllers/adminAuth');
 
 
 /**
  * @swagger
  * tags:
- *   name: Auth
+ *   name: adminAuth
  *   description: Authentication
  */
 
@@ -20,7 +20,7 @@ const AdminAuthController = require('../controllers/AdminAuth');
  * /auth/login:
  *   post:
  *     description: Login to receive Bearer token
- *     tags: [Auth]
+ *     tags: [adminAuth]
  *     produces:
  *       - application/json
  *     requestBody:
@@ -47,7 +47,7 @@ const AdminAuthController = require('../controllers/AdminAuth');
  *       404:
  *         description: Email not found.
  */
-router.post('/login', AdminAuthController.login);
+router.post('/login', adminAuthController.login);
 
 /**
  * @swagger
@@ -94,10 +94,10 @@ router.post('/login', AdminAuthController.login);
  *       409:
  *         description: Username or email already exists
  */
-router.post('/register', AdminAuthController.register);
+router.post('/register', adminAuthController.register);
 
 
-router.get('/me', middleware.checkAuthentication, AdminAuthController.me);
+router.get('/me', middleware.checkAuthentication, adminAuthController.me);
 
 /**
  * @swagger
@@ -119,6 +119,6 @@ router.get('/me', middleware.checkAuthentication, AdminAuthController.me);
  *       401:
  *         description: Unauthorized. Empty, wrong or malformed token
  */
-router.get('/logout', middleware.checkAuthentication, AdminAuthController.logout);
+router.get('/logout', middleware.checkAuthentication, adminAuthController.logout);
 
 module.exports = router;

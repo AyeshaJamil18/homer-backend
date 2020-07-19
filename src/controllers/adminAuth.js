@@ -9,11 +9,11 @@ const bcrypt = require('bcryptjs');
 const validator = require('validator');
 
 const config = require('../config');
-const UserModel = require('../models/admin');
+const adminModel = require('../models/admin');
 
 const notifier = require('../notifier');
 
-const logger = require('../logger')("controller\AdminAuth.js");
+const logger = require('../logger')("controller\adminAuth.js");
 
 // Using the same regex as in the frontend for password validation
 const passwordRegex = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&,.#\\+\\-\\=\\_~])[A-Za-z\\d@$!%*?&,.#\\+\\-\\=\\_~]{8,30}$';
@@ -23,21 +23,21 @@ const login = (req, res) => {
         return;
     }
 
-    UserModel.findOne({email: req.body.email})
-        .then(user => {
-            if (user) {
+    adminModel.findOne({email: req.body.email})
+        .then(admin => {
+            if (admin) {
                 // check if the password is valid
-                const isPasswordValid = bcrypt.compareSync(req.body.password, user.password);
+                const isPasswordValid = bcrypt.compareSync(req.body.password, admin.password);
                 if (!isPasswordValid) {
-                    logger.debugWithUuid(req, "User " + user.email + " login failed due to wrong password");
+                    logger.debugWithUuid(req, "User " + admin.email + " login failed due to wrong password");
                     return res.status(401).send({token: null});
                 }
 
-                logger.debugWithUuid(req, "User " + user + " has logged in");
+                logger.debugWithUuid(req, "User " + admin + " has logged in");
 
-                // if user is found and password is valid
+                // if admin is found and password is valid
                 // create a token
-                const token = jwt.sign({id: user._id, email: user.email, username: user.username},
+                const token = jwt.sign({id: admin._id, email: admin.email, username: admin.username},
                     config.jwtSecret, {
                         expiresIn: 86400 // expires in 24 hours
                     });
@@ -45,8 +45,8 @@ const login = (req, res) => {
                 res.status(200).json({token: token});
 
                 // Update lastLogin
-                user.lastLogin = Date.now();
-                return user.save();
+                admin.lastLogin = Date.now();
+                return admin.save();
             } else {
                 logger.debugWithUuid(req, "User with " + req.body.email + " not found");
 
@@ -87,13 +87,13 @@ const register = (req, res) => {
         return;
     }
 
-    const user = Object.assign(req.body, {password: bcrypt.hashSync(req.body.password, 8)});
+    const admin = Object.assign(req.body, {password: bcrypt.hashSync(req.body.password, 8)});
 
-    UserModel.create(user)
+    adminModel.create(admin)
         .then(dbUser => {
             logger.debugWithUuid(req, "User " + dbUser.username + ", Email " + dbUser.email + " has been registered");
 
-            // if user is registered without errors
+            // if admin is registered without errors
             // create a token
             const token = jwt.sign({id: dbUser._id, email: dbUser.email}, config.jwtSecret, {
                 expiresIn: 86400 // expires in 24 hours
@@ -101,7 +101,7 @@ const register = (req, res) => {
 
             res.status(200).json({token: token});
 
-            // notifier user
+            // notifier admin
             const template = notifier.templates.accountCreated(dbUser.firstName);
             notifier.notifyUserWithTemplate(dbUser._id, template);
         })
@@ -147,16 +147,16 @@ const register = (req, res) => {
 };
 
 const me = (req, res) => {
-    UserModel.findById(req.userId).select('email').exec()
-        .then(user => {
-            logger.debugWithUuid(req, "User object " + user.email + " was requested");
+    adminModel.findById(req.userId).select('email').exec()
+        .then(admin => {
+            logger.debugWithUuid(req, "User object " + admin.email + " was requested");
 
-            if (!user) return res.status(404).json({
+            if (!admin) return res.status(404).json({
                 error: 'Not Found',
                 message: `User not found`
             });
 
-            res.status(200).json(user)
+            res.status(200).json(admin)
         })
         .catch(error => {
             logger.errorWithUuid(req, error.message);
