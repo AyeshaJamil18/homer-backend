@@ -160,11 +160,18 @@ const searchUser = (req, res) => {
         groupModel.findOne({title: nomemberof}).then(group => {
             userModel.find({
                 $expr: {
-                    $regexMatch: {
-                        input: {$concat: ["$firstName", " ", "$lastName"]},
-                        regex: req.params.match,
-                        options: "i"
-                    }
+                    $or: [
+                        { $regexMatch: {
+                            input: { $concat: [ "$firstName", " ", "$lastName" ] },
+                            regex: req.params.match,
+                            options: "i"
+                        }},
+                        { $regexMatch: {
+                            input: "$username",
+                            regex: req.params.match,
+                            options: "i"
+                        }}
+                    ]
                 }
             }).then(result => {
                 logger.info("raw result of user search: " + result)
