@@ -7,18 +7,12 @@ const userModel = require('../models/user');
 
 const logger = require('../logger')("controller/auth.js");
 
-const getPlaylistById = (playlistId) => {
-    logger.debug("Playlist " + playlistId + " was requested");
-
-    return playlistModel.findById(playlistId);
-};
-
 const apiGetOwnData = (req, res) => {
     playlistModel.findById(req.playlistId, 'title videos subscribers', {lean: true})
         .then(playlist => res.status(200).json(playlist));
 };
 
-const GetPlaylist = (req, res) => {
+const getPlaylist = (req, res) => {
 
     logger.debug("Requested document with id " + req.userId);
     userModel.findById(req.userId).then(currentUser => {
@@ -49,12 +43,12 @@ const extractParamsFromDocument = (doc, variables) => {
 };
 
 
-const AddVideoToPlaylist = (req, res) => {
+const addVideoToPlaylist = (req, res) => {
 
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['PlaylistName', 'VideoId'], req, res)) {
         return;
     }
-    playlistModel.findById(req.body.PlaylistName).then(currentPlaylist => {
+    playlistModel.findById(req.body.PlaylistName).then(() => {
 
         playlistModel.findByIdAndUpdate(req.body.PlaylistName, {$addToSet: {videos: req.body.VideoId}})
             .then(() => {
@@ -73,7 +67,7 @@ const AddVideoToPlaylist = (req, res) => {
 
 
 module.exports = {
-    GetPlaylist,
-    AddVideoToPlaylist,
+    getPlaylist,
+    addVideoToPlaylist,
     apiGetOwnData
 };

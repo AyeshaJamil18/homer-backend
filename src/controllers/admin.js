@@ -8,7 +8,6 @@ const logger = require('../logger')("controller/AdminAuth.js");
 
 const getAdminById = (userId) => {
     logger.debug("Admin " + userId + " was requested");
-
     return adminModel.findById(userId);
 };
 
