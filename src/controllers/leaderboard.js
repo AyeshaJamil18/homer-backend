@@ -14,7 +14,7 @@ const apiGetOwnData = (req, res) => {
 };
 
 const createLeaderboardIfNotExistent = (leaderboardIdentifier, res) => {
-    leaderboardModel.exists({identifier : leaderboardIdentifier}).then(exists => {
+    leaderboardModel.exists({identifier: leaderboardIdentifier}).then(exists => {
         if (exists) {
             logger.info("leaderboard for " + leaderboardIdentifier + " already existed")
             res.status(200).send();
@@ -23,6 +23,7 @@ const createLeaderboardIfNotExistent = (leaderboardIdentifier, res) => {
                 identifier: leaderboardIdentifier,
                 entries: []
             }).then(() => {
+                logger.info("leaderboard for " + leaderboardIdentifier + " created.");
                 res.status(200).send();
             }).catch(err => {
                 logger.error(err);
@@ -32,26 +33,51 @@ const createLeaderboardIfNotExistent = (leaderboardIdentifier, res) => {
     });
 };
 
+const addUserToLeaderboard = (leaderboardIdentifier, user, res) => {
+    createLeaderboardIfNotExistent(leaderboardIdentifier, res);
+    leaderboardModel.findOneAndUpdate({identifier: leaderboardIdentifier},
+        {$addToSet: {entries: user}})
+        .then(() => {
+            logger.info("added user " + user + " to leaderboard " + leaderboardIdentifier + ".");
+            res.status(200).send();
+        }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    });
+};
+
+const removeUserFromLeaderboard = (leaderboardIdentifier, user, res) => {
+    leaderboardModel.findOneAndUpdate({identifier: leaderboardIdentifier},
+        {$pull: {entries: user}})
+        .then(() => {
+            res.status(200).send();
+        }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    });
+};
+
 const apiGenerateRanking = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['leaderboard'], req, res)) {
         return;
     }
 
-    leaderboardModel.findOne({identifier: req.params['leaderboard']})
-        .then(leaderboard => {
-            logger.info("Found leaderboard: " + leaderboard.identifier + ": " + leaderboard + "\n"
-                + ". Number of entries: " + leaderboard.entries.length + ". Entries: " + leaderboard.entries)
-            const result = leaderboard.entries.map( function(entry) {
-                // TODO retrieve points from recordModel and use real data
-                let points = Math.floor(Math.random() * 100);
-                let elem = { "username": entry, "points": points };
-                return elem;
-            });
-            result.sort((a, b) => parseFloat(b.points) - parseFloat(a.points));
-            res.status(200).send(result);
-        }).catch(err => {
-            logger.error(err);
-            res.status(500).send(err);
+    recordModel.find({totalPoints: {$gt: 0}})
+        .then(allRecords => {
+            leaderboardModel.findOne({identifier: req.params['leaderboard']})
+                .then(leaderboard => {
+                    logger.info("Found leaderboard: " + leaderboard.identifier + ": " + leaderboard + "\n"
+                        + ". Number of entries: " + leaderboard.entries.length + ". Entries: " + leaderboard.entries)
+                    const result = leaderboard.entries.map(function (entry) {
+                        let points = allRecords.find(elem => elem.recordUsername === entry).totalPoints;
+                        return {"username": entry, "points": points};
+                    });
+                    result.sort((a, b) => parseFloat(b.points) - parseFloat(a.points));
+                    res.status(200).send(result);
+                }).catch(err => {
+                logger.error(err);
+                res.status(500).send(err);
+            })
         })
 
 };
@@ -59,5 +85,7 @@ const apiGenerateRanking = (req, res) => {
 module.exports = {
     apiGetOwnData,
     createLeaderboardIfNotExistent,
-    apiGenerateRanking
+    apiGenerateRanking,
+    addUserToLeaderboard,
+    removeUserFromLeaderboard
 };

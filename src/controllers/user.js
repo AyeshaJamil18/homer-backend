@@ -107,6 +107,14 @@ const apiAddXp = (req, res) => {
         return;
     }
 
+    if (!(parseFloat(req.params['xp']) > 0)) {
+        res.status(400).json({
+            error: 'Bad Request',
+            message: 'XP to be added should be a at least 1!'
+        });
+        return;
+    }
+
     userModel.findById(req.userId).then(currentUser => {
         createRecordForUserIfNotExistent(currentUser.username,req.params['xp'] , res);
         recordModel.findOneAndUpdate({recordUsername: currentUser.username},
@@ -124,6 +132,7 @@ const apiAddXp = (req, res) => {
         res.status(500).send("Something went wrong.")
     })
 };
+
 
 const apiAddPlaylist= (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['PlaylistName'], req, res)) {
@@ -146,6 +155,7 @@ const apiAddPlaylist= (req, res) => {
         logger.error(err);
         res.status(500).send("User Not Found")
     })};
+
 
 const removeFriend = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {

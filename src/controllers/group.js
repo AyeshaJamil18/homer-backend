@@ -1,5 +1,10 @@
 "use strict";
 
+const {createLeaderboardIfNotExistent} = require("./leaderboard");
+const {addUserToLeaderboard} = require("./leaderboard");
+const {removeUserFromLeaderboard} = require("./leaderboard");
+
+
 const userModel = require('../models/user');
 const groupModel = require('../models/group');
 
@@ -13,9 +18,9 @@ const group = (req, res) => {
 
     userModel.findById(req.userId).then(requester => {
         groupModel.aggregate([
-            { $match: { $and: [ {title: req.params.title}, {$or: [ {members: requester.username}, {invited: requester.username}]}]}},
-            { $lookup: { from: 'users', localField: 'members', foreignField: 'username', as: 'members' }},
-            { $lookup: { from: 'users', localField: 'invited', foreignField: 'username', as: 'invited' }}
+            {$match: {$and: [{title: req.params.title}, {$or: [{members: requester.username}, {invited: requester.username}]}]}},
+            {$lookup: {from: 'users', localField: 'members', foreignField: 'username', as: 'members'}},
+            {$lookup: {from: 'users', localField: 'invited', foreignField: 'username', as: 'invited'}}
         ]).then(group => res.status(200).json(group[0]));
     }).catch(err => {
         logger.error(err);
@@ -30,11 +35,13 @@ const invite = (req, res) => {
     logger.debug("Inviting " + req.params.user + " to the group " + req.params.title);
 
     userModel.findById(req.userId).then(invitator => {
-        userModel.findOne({ username: req.params.user })
+        userModel.findOne({username: req.params.user})
             .then(invited => {
-                groupModel.findOneAndUpdate({ $and: [ {title: req.params.title}, { members: invitator.username}]},
-                    { $addToSet: { invited: invited.username}})
-                    .then(() => { res.status(200).send(); })
+                groupModel.findOneAndUpdate({$and: [{title: req.params.title}, {members: invitator.username}]},
+                    {$addToSet: {invited: invited.username}})
+                    .then(() => {
+                        res.status(200).send();
+                    })
                     .catch(err => {
                         logger.error(err);
                         res.status(404).send("Group not found or invitator not member of the group.");
@@ -59,9 +66,12 @@ const join = (req, res) => {
     userModel.findById(req.userId)
         .then(user => {
             groupModel.findOneAndUpdate(
-                { $and: [{title: req.params.title}, {invited: user.username}]},
-                { $addToSet: { members: user.username }, $pull: { invited: user.username }})
-                .then(() => { res.status(200).send(); })
+                {$and: [{title: req.params.title}, {invited: user.username}]},
+                {$addToSet: {members: user.username}, $pull: {invited: user.username}})
+                .then(() => {
+                    addUserToLeaderboard(req.params.title, user.username, res);
+                    res.status(200).send();
+                })
                 .catch(err => {
                     logger.error(err);
                     res.status(404).send("Group not found or user not invited");
@@ -82,9 +92,12 @@ const leave = (req, res) => {
     userModel.findById(req.userId)
         .then(user => {
             groupModel.findOneAndUpdate(
-                { $and: [{title: req.params.title}, {members: user.username}]},
-                { $pull: { members: user.username }})
-                .then(() => { res.status(200).send(); })
+                {$and: [{title: req.params.title}, {members: user.username}]},
+                {$pull: {members: user.username}})
+                .then(() => {
+                    removeUserFromLeaderboard(req.params.title, user.username, res);
+                    res.status(200).send();
+                })
                 .catch(err => {
                     logger.error(err);
                     res.status(404).send("Group not found or user not invited");
@@ -102,12 +115,14 @@ const create = (req, res) => {
     }
     logger.debug("User creates the group " + req.body['title']);
 
+
     userModel.findById(req.userId).then(user => {
         groupModel.create({
             title: req.body['title'],
             members: [user.username],
             invited: req.body['invited']
         }).then(() => {
+            createLeaderboardIfNotExistent(req.body['title'], res);
             res.status(200).send();
         }).catch(() => {
             res.status(400).send();
