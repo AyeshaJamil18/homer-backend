@@ -8,7 +8,6 @@
     "email": "notifications.homer@gmail.com",
     "emailPass": "vsbezxlmnzvdwdcl",
     "mongoURI": "mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
-    "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
     "frontendUrl": "http://localhost:8000"
   },
   "test": {
@@ -20,7 +19,6 @@
     "email": "notifications.homer@gmail.com",
     "emailPass": "vsbezxlmnzvdwdcl",
     "mongoURI":"mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
-    "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
     "frontendUrl": "http://localhost:8000"
   },
   "production": {
@@ -32,7 +30,6 @@
     "email": "notifications.homer@gmail.com",
     "emailPass": "vsbezxlmnzvdwdcl",
     "mongoURI":"mongodb+srv://dbUser:homerdb@cluster0-rasve.mongodb.net/homerdb?retryWrites=true&w=majority",
-    "kloudlessApiKey": "_x_bp7wOUPzGWmtumPJA71CKjHFRVJ98QJsyHnAMVZMr60Jm",
     "frontendUrl": "http://localhost:8000"
   }
 }

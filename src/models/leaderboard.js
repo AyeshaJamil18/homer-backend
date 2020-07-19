@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 // Define the Leaderboard schema
 const LeaderboardSchema = new mongoose.Schema({
     // 'global' or the name of the group
-    identifier : {
+    identifier: {
         type: String,
         required: true,
         unique: true

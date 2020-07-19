@@ -134,19 +134,18 @@ const apiAddXp = (req, res) => {
 };
 
 
-const apiAddPlaylist= (req, res) => {
+const apiAddPlaylist = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['PlaylistName'], req, res)) {
         return;
     }
-    const Video = Object.assign(req.body);
     userModel.findById(req.userId).then(currentUser => {
-    playlistModel.create({
+        playlistModel.create({
             creator: currentUser['username'],
             title: req.params['PlaylistName']
         }).then(() => {
-                logger.debug("Successfully added Playlist with name"+ req.params['PlaylistName'] );
-                res.status(200).send();
-            })
+            logger.debug("Successfully added Playlist with name" + req.params['PlaylistName']);
+            res.status(200).send();
+        })
             .catch(err => {
                 logger.error(err);
                 res.status(500).send("Playlist could not be created. Title already exist");
@@ -154,7 +153,8 @@ const apiAddPlaylist= (req, res) => {
     }).catch(err => {
         logger.error(err);
         res.status(500).send("User Not Found")
-    })};
+    })
+};
 
 
 const removeFriend = (req, res) => {
@@ -194,31 +194,35 @@ const searchUser = (req, res) => {
             userModel.find({
                 $expr: {
                     $or: [
-                        { $regexMatch: {
-                            input: { $concat: [ "$firstName", " ", "$lastName" ] },
-                            regex: req.params.match,
-                            options: "i"
-                        }},
-                        { $regexMatch: {
-                            input: "$username",
-                            regex: req.params.match,
-                            options: "i"
-                        }}
+                        {
+                            $regexMatch: {
+                                input: {$concat: ["$firstName", " ", "$lastName"]},
+                                regex: req.params.match,
+                                options: "i"
+                            }
+                        },
+                        {
+                            $regexMatch: {
+                                input: "$username",
+                                regex: req.params.match,
+                                options: "i"
+                            }
+                        }
                     ]
                 }
             }).then(result => {
-                logger.info("raw result of user search: " + result)
+                logger.debug("raw result of user search: " + result)
                 if (!(nofriendof == null || user == null)) {
                     result = result.filter(entry => !user.friends.includes(entry.username))
-                    logger.info("result of user search after filtering out friends of : " + nofriendof + ":" + result)
+                    logger.debug("result of user search after filtering out friends of : " + nofriendof + ":" + result)
                 }
                 if (!(nomemberof == null || group == null)) {
                     result = result.filter(entry => !group.members.includes(entry.username))
                     result = result.filter(entry => !group.invited.includes(entry.username))
-                    logger.info("result of user search after filtering out members of : " + nomemberof + ":" + result)
+                    logger.debug("result of user search after filtering out members of : " + nomemberof + ":" + result)
                 }
                 result = result.slice(0, 10)
-                logger.info("result of user search after limiting search result to 10: " + result)
+                logger.debug("result of user search after limiting search result to 10: " + result)
                 res.status(200).json(result);
             }).catch(() => {
                 res.status(500).send("Internal Error");
