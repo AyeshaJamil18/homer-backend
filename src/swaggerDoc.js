@@ -7,7 +7,7 @@ const options = {
     swaggerDefinition: {
         openapi: '3.0.2',
         info: {
-            title: 'DeDaS Backend API',
+            title: 'Homer Backend API',
             version: '0.0.1',
             description: 'Get the good stuff'
         },

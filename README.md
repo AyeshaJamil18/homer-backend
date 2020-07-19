@@ -25,25 +25,10 @@ cd path/to/homer-backend
 npm install
 ```
 
-**Set up your database**
+**Set the port environment variable**
 
-* Create a new directory where your database will be stored (it's a good idea to separate data and business logic - the data directory should be on a different place than your app)
-* Start the database server
-```
-mongod --dbpath relative/path/to/database
-```
-* Create all database schemes and import data to begin with
-```
-mongorestore dump/
-```
-
-**Set the environment variables**
-
-This variables are based in your local configuration
 ```bash
 export PORT=3000
-export MONGODB_URI="mongodb://localhost:27017/homerdb"
-export JWT_SECRET="very secret secret"
 ```
 
 ## Start the project

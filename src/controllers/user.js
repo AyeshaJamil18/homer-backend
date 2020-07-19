@@ -1,8 +1,12 @@
 "use strict";
 
 const {checkForMissingVariablesInBodyElseSendResponseAndFalse} = require("./util");
+const {createRecordForUserIfNotExistent} = require("./record");
 
 const userModel = require('../models/user');
+const groupModel = require('../models/group');
+const recordModel = require('../models/record');
+const playlistModel = require('../models/playlist');
 
 const logger = require('../logger')("controller/auth.js");
 
@@ -26,6 +30,7 @@ const apiResolveIdToName = (req, res) => {
         .then(user => user ?
             res.status(200).send({username: user.username}) : res.status(404).send("Not found"))
         .catch(err => {
+            log.error(err)
             res.status(500).send();
         })
 };
@@ -36,9 +41,14 @@ const apiCheckUserEmail = (req, res) => {
     }
 
     userModel.find({email: req.params['userEmail']})
-        .then(user => (user && user.length > 0) ? 
-            user[0].id === req.userId ? res.status(200).send({email: user[0].email, userId: user[0].id, isExist: true, isRequester:true})
-                                    : res.status(200).send({email: user[0].email, userId: user[0].id, isExist: true, isRequester:false})
+        .then(user => (user && user.length > 0) ?
+            user[0].id === req.userId ? res.status(200).send({
+                    email: user[0].email,
+                    userId: user[0].id,
+                    isExist: true,
+                    isRequester: true
+                })
+                : res.status(200).send({email: user[0].email, userId: user[0].id, isExist: true, isRequester: false})
             : res.status(404).send({email: null, userId: null, isExist: false}))
 };
 
@@ -49,30 +59,124 @@ const apiFindUserByUsername = (req, res) => {
 
     userModel.find({username: req.params['username']})
         .then(user => (user && user.length > 0) ?
-            user[0].username === req.params['username'] ? res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:true})
-                : res.status(200).send({username: user[0].username, userId: user[0].id, isExist: true, isRequester:false})
+            user[0].username === req.params['username']
+                ? res.status(200).send({
+                    username: user[0].username,
+                    userId: user[0].id,
+                    isExist: true,
+                    isRequester: true,
+                    firstName: user[0].firstName,
+                    lastName: user[0].lastName
+                })
+                : res.status(200).send({
+                    username: user[0].username,
+                    userId: user[0].id,
+                    isExist: true,
+                    isRequester: false,
+                    firstName: user[0].firstName,
+                    lastName: user[0].lastName
+                })
             : res.status(404).send({username: null, userId: null, isExist: false}))
 };
 
 
-const apiAddFriend = (req, res) => {
+const addFriend = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
         return;
     }
 
     userModel.findOne({username: req.body.username})                                                    // Search for the user to be added
         .then(addedFriend => {
-            userModel.findByIdAndUpdate(req.userId, { $addToSet: { friends: addedFriend.username }})    // Find the own user entry and add the user as a friend
+            userModel.findByIdAndUpdate(req.userId, {$addToSet: {friends: addedFriend.username}})    // Find the own user entry and add the user as a friend
                 .then(currUser => {
-                    addedFriend.update({$addToSet: { friends: currUser.username }})                     // Add yourself as a friend to the other user
+                    addedFriend.update({$addToSet: {friends: currUser.username}})                     // Add yourself as a friend to the other user
                         .then(() => {
                             res.status(200).send();
                         });
                 });
         })
         .catch(err => {
+            log.error(err)
             res.status(404).send("User couldn't be found.");
         });
+};
+
+
+const apiAddXp = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['xp'], req, res)) {
+        return;
+    }
+
+    if (!(parseFloat(req.params['xp']) > 0)) {
+        res.status(400).json({
+            error: 'Bad Request',
+            message: 'XP to be added should be a at least 1!'
+        });
+        return;
+    }
+
+    userModel.findById(req.userId).then(currentUser => {
+        createRecordForUserIfNotExistent(currentUser.username, res);
+        recordModel.findOneAndUpdate({recordUsername: currentUser.username},
+            {$inc: {totalPoints: req.params['xp']}})
+            .then(() => {
+                logger.info("Successfully added " + req.params['xp'] + "XP.")
+                res.status(200).send();
+            })
+            .catch(err => {
+                logger.error(err);
+                res.status(500).send("XP could not be added.");
+            })
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send("Something went wrong.")
+    })
+};
+
+
+const apiAddPlaylist = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['PlaylistName'], req, res)) {
+        return;
+    }
+    userModel.findById(req.userId).then(currentUser => {
+        playlistModel.create({
+            creator: currentUser['username'],
+            title: req.params['PlaylistName']
+        }).then(() => {
+            logger.debug("Successfully added Playlist with name" + req.params['PlaylistName']);
+            res.status(200).send();
+        })
+            .catch(err => {
+                logger.error(err);
+                res.status(500).send("Playlist could not be created. Title already exist");
+            })
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send("User Not Found")
+    })
+};
+
+
+const removeFriend = (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['username'], req, res)) {
+        return;
+    }
+
+    userModel.findOne({username: req.params.username})                                                    // Search for the user to be removed
+        .then(removedFriend => {
+            userModel.findByIdAndUpdate(req.userId, {$pull: {friends: removedFriend.username}})    // Find the own user entry and remove the user as a friend
+                .then(currUser => {
+                    removedFriend.update({$pull: {friends: currUser.username}})                     // Remove yourself as a friend to the other user
+                        .then(() => {
+                            res.status(200).send();
+                        });
+                });
+        })
+        .catch(err => {
+            logger.error(err)
+            res.status(404).send("User couldn't be found.");
+        });
+
 };
 
 const searchUser = (req, res) => {
@@ -80,20 +184,81 @@ const searchUser = (req, res) => {
         return;
     }
 
-    userModel.find({
-        $expr: {
-            $regexMatch: {
-                input: { $concat: [ "$firstName", " ", "$lastName" ] },
-                regex: req.params.match,
-                options: "i"
-            }
-        }
-    }).then(result => {
-        res.status(200).json(result);
+    const nomemberof = req.query.nomemberof;
+    const nofriendof = req.query.nofriendof;
+
+    logger.info("nomemberof: " + nomemberof + ". nofriendof: " + nofriendof);
+
+    userModel.findOne({username: nofriendof}).then(user => {
+        groupModel.findOne({title: nomemberof}).then(group => {
+            userModel.find({
+                $expr: {
+                    $or: [
+                        {
+                            $regexMatch: {
+                                input: {$concat: ["$firstName", " ", "$lastName"]},
+                                regex: req.params.match,
+                                options: "i"
+                            }
+                        },
+                        {
+                            $regexMatch: {
+                                input: "$username",
+                                regex: req.params.match,
+                                options: "i"
+                            }
+                        }
+                    ]
+                }
+            }).then(result => {
+                logger.debug("raw result of user search: " + result)
+                if (!(nofriendof == null || user == null)) {
+                    result = result.filter(entry => !user.friends.includes(entry.username))
+                    logger.debug("result of user search after filtering out friends of : " + nofriendof + ":" + result)
+                }
+                if (!(nomemberof == null || group == null)) {
+                    result = result.filter(entry => !group.members.includes(entry.username))
+                    result = result.filter(entry => !group.invited.includes(entry.username))
+                    logger.debug("result of user search after filtering out members of : " + nomemberof + ":" + result)
+                }
+                result = result.slice(0, 10)
+                logger.debug("result of user search after limiting search result to 10: " + result)
+                res.status(200).json(result);
+            }).catch(() => {
+                res.status(500).send("Internal Error");
+            });
+        });
     }).catch(err => {
-        res.status(500).send("Internal Error");
+        logger.error(err);
+        res.status(400).send();
     });
-}
+
+};
+
+const groups = (req, res) => {
+    userModel.findById(req.userId).then(requester => {
+        groupModel.find({members: requester.username}, 'title').then(memberGroups => {
+            groupModel.find({invited: requester.username}, 'title').then(invitedGroups => {
+                res.status(200).json({member: memberGroups, invited: invitedGroups});
+            })
+        })
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    })
+};
+
+const friends = (req, res) => {
+    userModel.findById(req.userId).then(user => {
+        userModel.aggregate([
+            {$match: {username: user.username}},
+            {$lookup: {from: 'users', localField: 'friends', foreignField: 'username', as: 'friends'}}
+        ]).then(friends => res.status(200).send(friends[0].friends))
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send();
+    })
+};
 
 
 module.exports = {
@@ -102,6 +267,11 @@ module.exports = {
     apiResolveIdToName,
     apiGetOwnData,
     apiCheckUserEmail,
-    apiAddFriend,
-    searchUser
+    addFriend,
+    removeFriend,
+    searchUser,
+    groups,
+    apiAddXp,
+    friends,
+    apiAddPlaylist
 };

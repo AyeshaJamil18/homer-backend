@@ -6,7 +6,6 @@ const logger = require('../logger')("controller/auth.js");
 
 const getExerciseById = (exerciseId) => {
     logger.debug("Exercise " + exerciseId + " was requested");
-
     return exerciseModel.findById(exerciseId);
 };
 

@@ -11,7 +11,7 @@ const PlaylistSchema = new mongoose.Schema({
     },
     videos: {
         // IDs of the videos the playlist consists of
-        type: [Number],
+        type: [String],
     },
     subscribers: {
         // usernames of the users that subscribed to the playlist

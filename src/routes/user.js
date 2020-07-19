@@ -57,7 +57,6 @@ router.get('/', middleware.checkAuthentication, userController.apiGetOwnData);
  */
 //router.get('/:userId', middleware.checkAuthentication, userController.apiResolveIdToName);
 
-// TODO: rename endpoint to "findUserByUsername" and update frontend accordingly
 router.get('/getUserByUsername/:username', middleware.checkAuthentication, userController.apiFindUserByUsername);
 
 router.get('/checkEmail/:userEmail', middleware.checkAuthentication, userController.apiCheckUserEmail);
@@ -87,6 +86,17 @@ router.get('/search/:match', middleware.checkAuthentication, userController.sear
  *       404:
  *         description: The specified user wasn't found
  */
-router.post('/addFriend', middleware.checkAuthentication, userController.apiAddFriend);
+router.post('/addFriend', middleware.checkAuthentication, userController.addFriend);
+
+router.delete('/removeFriend/:username', middleware.checkAuthentication, userController.removeFriend);
+
+router.get('/groups', middleware.checkAuthentication, userController.groups);
+
+
+router.put('/addXp/:xp', middleware.checkAuthentication, userController.apiAddXp);
+
+router.get('/friends', middleware.checkAuthentication, userController.friends);
+
+router.post('/CreatePlaylist/:PlaylistName', middleware.checkAuthentication, userController.apiAddPlaylist);
 
 module.exports = router;

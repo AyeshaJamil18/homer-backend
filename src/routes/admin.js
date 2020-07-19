@@ -55,9 +55,11 @@ router.get('/', middleware.checkAuthentication, adminController.apiGetOwnData);
  *       404:
  *         description: No document for this id found
  */
-router.get('/:adminId', middleware.checkAuthentication, adminController.apiResolveIdToName);
+router.get('/:userId', middleware.checkAuthentication, adminController.apiResolveIdToName);
 
 router.get('/checkEmail/:adminEmail', middleware.checkAuthentication, adminController.apiCheckAdminEmail);
 
 
 module.exports = router;
+
+
