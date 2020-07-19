@@ -29,5 +29,7 @@ const playlistController = require('../controllers/playlist');
  *         description: Found playlist data
  */
 router.get('/', middleware.checkAuthentication, playlistController.apiGetOwnData);
+router.get('/GetPlaylist', middleware.checkAuthentication, playlistController.GetPlaylist);
+router.post('/AddToPlaylist', playlistController.AddVideoToPlaylist);
 
 module.exports = router;

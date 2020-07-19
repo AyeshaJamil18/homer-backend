@@ -30,7 +30,7 @@ const ensureRecordIsInGlobalLeaderboard = (username, res) => {
     });
 }
 
-const createRecordForUserIfNotExistent = (username, res) => {
+const createRecordForUserIfNotExistent = (username,xp, res) => {
     recordModel.exists({recordUsername: username}).then(existent => {
         if (existent) {
             logger.info("record for user " + username + " already existed:" + existent + ".")
@@ -39,7 +39,7 @@ const createRecordForUserIfNotExistent = (username, res) => {
         } else {
             recordModel.create({
                 recordUsername: username,
-                totalPoints: 0
+                totalPoints: xp
             }).then(() => {
                 ensureRecordIsInGlobalLeaderboard(username, res);
             }).catch(err => {

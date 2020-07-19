@@ -6,6 +6,7 @@ const {createRecordForUserIfNotExistent} = require("./record");
 const userModel = require('../models/user');
 const groupModel = require('../models/group');
 const recordModel = require('../models/record');
+const playlistModel = require('../models/playlist');
 
 const logger = require('../logger')("controller/auth.js");
 
@@ -115,7 +116,7 @@ const apiAddXp = (req, res) => {
     }
 
     userModel.findById(req.userId).then(currentUser => {
-        createRecordForUserIfNotExistent(currentUser.username, res);
+        createRecordForUserIfNotExistent(currentUser.username,req.params['xp'] , res);
         recordModel.findOneAndUpdate({recordUsername: currentUser.username},
             {$inc: {totalPoints: req.params['xp']}})
             .then(() => {
@@ -131,6 +132,30 @@ const apiAddXp = (req, res) => {
         res.status(500).send("Something went wrong.")
     })
 };
+
+
+const apiAddPlaylist= (req, res) => {
+    if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['PlaylistName'], req, res)) {
+        return;
+    }
+    const Video = Object.assign(req.body);
+    userModel.findById(req.userId).then(currentUser => {
+    playlistModel.create({
+            creator: currentUser['username'],
+            title: req.params['PlaylistName']
+        }).then(() => {
+                logger.debug("Successfully added Playlist with name"+ req.params['PlaylistName'] );
+                res.status(200).send();
+            })
+            .catch(err => {
+                logger.error(err);
+                res.status(500).send("Playlist could not be created. Title already exist");
+            })
+    }).catch(err => {
+        logger.error(err);
+        res.status(500).send("User Not Found")
+    })};
+
 
 const removeFriend = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.body, ['username'], req, res)) {
@@ -148,6 +173,7 @@ const removeFriend = (req, res) => {
                 });
         })
         .catch(err => {
+            logger.error(err)
             res.status(404).send("User couldn't be found.");
         });
 
@@ -158,19 +184,43 @@ const searchUser = (req, res) => {
         return;
     }
 
-    userModel.find({
-        $expr: {
-            $regexMatch: {
-                input: {$concat: ["$firstName", " ", "$lastName"]},
-                regex: req.params.match,
-                options: "i"
-            }
-        }
-    }).then(result => {
-        res.status(200).json(result);
-    }).catch(() => {
-        res.status(500).send("Internal Error");
+    const nomemberof = req.query.nomemberof;
+    const nofriendof = req.query.nofriendof;
+
+    logger.info("nomemberof: " + nomemberof + ". nofriendof: " + nofriendof);
+
+    userModel.findOne({username: nofriendof}).then(user => {
+        groupModel.findOne({title: nomemberof}).then(group => {
+            userModel.find({
+                $expr: {
+                    $regexMatch: {
+                        input: {$concat: ["$firstName", " ", "$lastName"]},
+                        regex: req.params.match,
+                        options: "i"
+                    }
+                }
+            }).then(result => {
+                logger.info("raw result of user search: " + result)
+                if (!(nofriendof == null || user == null)) {
+                    result = result.filter(entry => !user.friends.includes(entry.username))
+                    logger.info("result of user search after filtering out friends of : " + nofriendof + ":" + result)
+                }
+                if (!(nomemberof == null || group == null)) {
+                    result = result.filter(entry => !group.members.includes(entry.username))
+                    logger.info("result of user search after filtering out members of : " + nomemberof + ":" + result)
+                }
+                result = result.slice(0, 10)
+                logger.info("result of user search after limiting search result to 10: " + result)
+                res.status(200).json(result);
+            }).catch(() => {
+                res.status(500).send("Internal Error");
+            });
+        });
+    }).catch(err => {
+        logger.error(err);
+        res.status(400).send();
     });
+
 };
 
 const groups = (req, res) => {
@@ -210,5 +260,6 @@ module.exports = {
     searchUser,
     groups,
     apiAddXp,
-    friends
+    friends,
+    apiAddPlaylist
 };
