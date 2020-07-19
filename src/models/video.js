@@ -10,9 +10,13 @@ const VideoSchema = new mongoose.Schema({
     keywords: {
         type: String
     },
+    category: {
+        type: String
+    },
     videoUrl: {
         type: String
     },
+
     duration: {
         type: Number
     },
