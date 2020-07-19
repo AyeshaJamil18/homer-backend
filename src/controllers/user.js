@@ -134,19 +134,19 @@ const apiAddXp = (req, res) => {
 };
 
 
-const apiAddPlaylist= (req, res) => {
+const apiAddPlaylist = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['PlaylistName'], req, res)) {
         return;
     }
     const Video = Object.assign(req.body);
     userModel.findById(req.userId).then(currentUser => {
-    playlistModel.create({
+        playlistModel.create({
             creator: currentUser['username'],
             title: req.params['PlaylistName']
         }).then(() => {
-                logger.debug("Successfully added Playlist with name"+ req.params['PlaylistName'] );
-                res.status(200).send();
-            })
+            logger.debug("Successfully added Playlist with name" + req.params['PlaylistName']);
+            res.status(200).send();
+        })
             .catch(err => {
                 logger.error(err);
                 res.status(500).send("Playlist could not be created. Title already exist");
@@ -154,7 +154,8 @@ const apiAddPlaylist= (req, res) => {
     }).catch(err => {
         logger.error(err);
         res.status(500).send("User Not Found")
-    })};
+    })
+};
 
 
 const removeFriend = (req, res) => {
@@ -194,16 +195,20 @@ const searchUser = (req, res) => {
             userModel.find({
                 $expr: {
                     $or: [
-                        { $regexMatch: {
-                            input: { $concat: [ "$firstName", " ", "$lastName" ] },
-                            regex: req.params.match,
-                            options: "i"
-                        }},
-                        { $regexMatch: {
-                            input: "$username",
-                            regex: req.params.match,
-                            options: "i"
-                        }}
+                        {
+                            $regexMatch: {
+                                input: {$concat: ["$firstName", " ", "$lastName"]},
+                                regex: req.params.match,
+                                options: "i"
+                            }
+                        },
+                        {
+                            $regexMatch: {
+                                input: "$username",
+                                regex: req.params.match,
+                                options: "i"
+                            }
+                        }
                     ]
                 }
             }).then(result => {

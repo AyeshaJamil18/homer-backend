@@ -63,7 +63,7 @@ const checkAuthentication = (req, res, next) => {
         req.userId = decoded.id;
         next();
     });
-    };
+};
 
 const errorHandler = (err, req, res, next) => {
     if (res.headersSent) {
