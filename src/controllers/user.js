@@ -193,11 +193,18 @@ const searchUser = (req, res) => {
         groupModel.findOne({title: nomemberof}).then(group => {
             userModel.find({
                 $expr: {
-                    $regexMatch: {
-                        input: {$concat: ["$firstName", " ", "$lastName"]},
-                        regex: req.params.match,
-                        options: "i"
-                    }
+                    $or: [
+                        { $regexMatch: {
+                            input: { $concat: [ "$firstName", " ", "$lastName" ] },
+                            regex: req.params.match,
+                            options: "i"
+                        }},
+                        { $regexMatch: {
+                            input: "$username",
+                            regex: req.params.match,
+                            options: "i"
+                        }}
+                    ]
                 }
             }).then(result => {
                 logger.info("raw result of user search: " + result)
@@ -207,6 +214,7 @@ const searchUser = (req, res) => {
                 }
                 if (!(nomemberof == null || group == null)) {
                     result = result.filter(entry => !group.members.includes(entry.username))
+                    result = result.filter(entry => !group.invited.includes(entry.username))
                     logger.info("result of user search after filtering out members of : " + nomemberof + ":" + result)
                 }
                 result = result.slice(0, 10)
