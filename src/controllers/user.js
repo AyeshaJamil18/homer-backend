@@ -116,7 +116,7 @@ const apiAddXp = (req, res) => {
     }
 
     userModel.findById(req.userId).then(currentUser => {
-        createRecordForUserIfNotExistent(currentUser.username,req.params['xp'] , res);
+        createRecordForUserIfNotExistent(currentUser.username, res);
         recordModel.findOneAndUpdate({recordUsername: currentUser.username},
             {$inc: {totalPoints: req.params['xp']}})
             .then(() => {
