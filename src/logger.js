@@ -6,7 +6,7 @@ const uuidv4 = require('uuid/v4');
 const logger = winston.createLogger({
     level: config.logLevel,
     format: winston.format.json(),
-    defaultMeta: {app: 'studyhub-backend'},
+    defaultMeta: {app: 'homer-backend'},
     transports: [
         //
         // - Write to all logs with level `info` and below to `combined.log`

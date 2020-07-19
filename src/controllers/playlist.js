@@ -19,8 +19,6 @@ const getPlaylist = (req, res) => {
 
         playlistModel.find({creator: currentUser['username']}).then(data => {
 
-            // logger.debug("video " + data.videoTitle);
-            // res.status(200).send({videoTitle: data[0].videoTitle, videoUrl: data[].videoUrl});
             let extractedDouments = data.map(doc => {
                 return {...extractParamsFromDocument(doc, ['title', '_id', 'videos', 'subscribers', 'creator'])}
             });

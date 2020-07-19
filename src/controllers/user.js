@@ -138,7 +138,6 @@ const apiAddPlaylist = (req, res) => {
     if (!checkForMissingVariablesInBodyElseSendResponseAndFalse(req.params, ['PlaylistName'], req, res)) {
         return;
     }
-    const Video = Object.assign(req.body);
     userModel.findById(req.userId).then(currentUser => {
         playlistModel.create({
             creator: currentUser['username'],
@@ -212,18 +211,18 @@ const searchUser = (req, res) => {
                     ]
                 }
             }).then(result => {
-                logger.info("raw result of user search: " + result)
+                logger.debug("raw result of user search: " + result)
                 if (!(nofriendof == null || user == null)) {
                     result = result.filter(entry => !user.friends.includes(entry.username))
-                    logger.info("result of user search after filtering out friends of : " + nofriendof + ":" + result)
+                    logger.debug("result of user search after filtering out friends of : " + nofriendof + ":" + result)
                 }
                 if (!(nomemberof == null || group == null)) {
                     result = result.filter(entry => !group.members.includes(entry.username))
                     result = result.filter(entry => !group.invited.includes(entry.username))
-                    logger.info("result of user search after filtering out members of : " + nomemberof + ":" + result)
+                    logger.debug("result of user search after filtering out members of : " + nomemberof + ":" + result)
                 }
                 result = result.slice(0, 10)
-                logger.info("result of user search after limiting search result to 10: " + result)
+                logger.debug("result of user search after limiting search result to 10: " + result)
                 res.status(200).json(result);
             }).catch(() => {
                 res.status(500).send("Internal Error");
